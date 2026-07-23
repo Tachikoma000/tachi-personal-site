@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import BookCover from '../../components/BookCover.astro';
+import StoreLinks from '../../components/StoreLinks.astro';
+import { withBase } from '../../lib/url';
+
+export async function getStaticPaths() {
+  const books = await getCollection('books');
+  return books.map((book) => ({ params: { slug: book.id }, props: { book } }));
+}
+const { book } = Astro.props;
+---
+<Base title={`${book.data.title} — tachi`} description={book.data.excerpt} ogType="article">
+  <section class="view">
+    <TopBar active="books" />
+    <a class="back-link" href={withBase('/books/')}>← the shelf</a>
+    <SectionHeading title={book.data.title} note={book.data.sub} />
+    <div class="book-detail">
+      <BookCover coverLines={book.data.coverLines} />
+      <div class="col">
+        <p class="lede">{book.data.lede}</p>
+        <p>{book.data.body}</p>
+        <StoreLinks links={book.data.stores} />
+      </div>
+    </div>
+  </section>
+</Base>

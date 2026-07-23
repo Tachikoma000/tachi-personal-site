@@ -1,0 +1,16 @@
+---
+interface Props {
+  coverLines: string[];
+  author?: string;
+  width?: number;
+}
+const { coverLines, author = 'a novel · tachi', width = 190 } = Astro.props;
+---
+<div class="cover" style={`width:${width}px;flex:0 0 ${width}px`}>
+  <div class="cover-title">
+    {coverLines.map((line, i) => (
+      <>{line}{i < coverLines.length - 1 && <br />}</>
+    ))}
+  </div>
+  <div class="cover-author">{author}</div>
+</div>

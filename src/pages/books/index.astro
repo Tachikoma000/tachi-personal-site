@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import PieceEntry from '../../components/PieceEntry.astro';
+import { withBase } from '../../lib/url';
+
+const books = (await getCollection('books')).sort((a, b) => b.data.year - a.data.year);
+---
+<Base title="books — tachi" description="the longer works — books by tachi">
+  <section class="view">
+    <TopBar active="books" />
+    <SectionHeading title="Books" note="the longer works" />
+    {books.map((b) => (
+      <PieceEntry
+        title={b.data.title}
+        sub={b.data.sub}
+        excerpt={b.data.excerpt}
+        kind="novel"
+        year={b.data.year}
+        href={withBase(`/books/${b.id}/`)}
+        illustration={b.data.illustration}
+      />
+    ))}
+  </section>
+</Base>
