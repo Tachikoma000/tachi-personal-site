@@ -1,0 +1,42 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import TopBar from '../components/TopBar.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Spot from '../components/Spot.astro';
+
+const bio = await getEntry('about', 'bio');
+if (!bio) throw new Error('content/about/bio.md is missing');
+const { Content: BioContent } = await render(bio);
+const selectedWorks = await getEntry('selectedWorks', 'selected-works');
+if (!selectedWorks) throw new Error('content/about/selected-works.yaml is missing');
+const groups = selectedWorks.data.groups;
+---
+<Base title="about — tachi" description="the hand behind the ink — about the writer tachi">
+  <section class="view about">
+    <TopBar active="about" />
+    <SectionHeading title="About" note="the hand behind the ink" />
+    <p class="about-lede">{bio.data.lede}</p>
+    <BioContent />
+    <p class="about-motto">{bio.data.motto}</p>
+    <div class="thread">{bio.data.thread}</div>
+    <h2 class="section-title works-title">Selected Works</h2>
+    {groups.map((g) => (
+      <div class="works-group">
+        <div class="works-group-label">{g.group}</div>
+        {g.items.map((w) => (
+          <div class="work-row">
+            <div class="work-title">{w.italic ? <em>{w.title}</em> : w.title}</div>
+            {w.sub && <div class="work-sub">{w.sub}</div>}
+            <div class="stores work-links">
+              {w.links.map((l) => (
+                <a href={l.href} target="_blank" rel="noopener">{l.label}</a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    ))}
+    <Spot name="continuous-line" size={64} style="margin:3.5rem auto 0" />
+  </section>
+</Base>

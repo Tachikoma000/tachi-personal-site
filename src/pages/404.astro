@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import { withBase } from '../lib/url';
+---
+<Base title="lost — tachi" description="this path leads nowhere">
+  <section class="view not-found">
+    <p class="whisper">this path leads nowhere</p>
+    <p style="margin-top:2.2rem"><a class="back-link" href={withBase('/')}>← return to the arrival</a></p>
+  </section>
+</Base>
