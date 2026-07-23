@@ -1,0 +1,25 @@
+{
+  "name": "tachi-personal-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "vitest run",
+    "port-content": "node scripts/port-content.mjs",
+    "fidelity": "node scripts/check-fidelity.mjs"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/eb-garamond": "^5.3.0",
+    "@fontsource/zen-kaku-gothic-new": "^5.3.0",
+    "astro": "^6.0.5"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "vitest": "^4.1.10"
+  }
+}
