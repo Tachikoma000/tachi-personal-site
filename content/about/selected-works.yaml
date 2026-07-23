@@ -1,0 +1,40 @@
+groups:
+  - group: "fiction"
+    items:
+      - title: "Handles, Not Halos"
+        italic: true
+        sub: "a novel"
+        links:
+          - { label: "barnes & noble", href: "https://www.barnesandnoble.com/w/handles-not-halos-tachi/1148448873" }
+          - { label: "apple books", href: "https://books.apple.com/at/book/handles-not-halos/id6753576884" }
+          - { label: "everand", href: "https://www.everand.com/book/927296672/Handles-Not-Halos" }
+  - group: "research & instruments"
+    items:
+      - title: "An open system differential vacuum calorimeter"
+        sub: "Journal of Thermal Analysis and Calorimetry, 150, 9995–10005 (2025)"
+        links:
+          - { label: "springer", href: "https://link.springer.com/article/10.1007/s10973-025-14348-9" }
+      - title: "A solid-state, open-system, differential calorimeter"
+        sub: "Review of Scientific Instruments, 91, 095102 (2020)"
+        links:
+          - { label: "aip", href: "https://pubs.aip.org/aip/rsi/article-abstract/91/9/095102/910247/A-solid-state-open-system-differential-calorimeter" }
+      - title: "VESPAIO"
+        sub: "Volatile Evolution Sampling Probe for Advanced In-Situ Operation, Southwest Research Institute"
+        links:
+          - { label: "swri", href: "https://www.swri.org/what-we-do/internal-research-development/2021/earth-space/vespaio-volatile-evolution-sampling-probe-advanced-situ-operation-15-r8934" }
+      - title: "Raman spectral assays of planetary returned samples and terrestrial analogs"
+        sub: "Southwest Research Institute"
+        links:
+          - { label: "swri", href: "https://www.swri.org/what-we-do/internal-research-development/2021/earth-space/capability-development-raman-spectral-assays-of-planetary-returned-samples-field-based-terrestrial-analogs-15-r6083" }
+      - title: "Far-UV studies of lunar regolith simulants"
+        sub: "LunGradCon 2021"
+        links:
+          - { label: "abstract", href: "https://impact.colorado.edu/lungradcon/2021/abstracts/Gimar_LunGradCon2021_Abstract.pdf" }
+      - title: "AAS Division for Planetary Sciences meeting abstract"
+        sub: "2022"
+        links:
+          - { label: "ads", href: "https://ui.adsabs.harvard.edu/abs/2022DPS....5452109M/abstract" }
+      - title: "NASA TechPort project"
+        sub: null
+        links:
+          - { label: "techport", href: "https://techport.nasa.gov/projects/145078" }
