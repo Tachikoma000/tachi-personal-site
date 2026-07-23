@@ -1,0 +1,33 @@
+/* Three voices: Cormorant Garamond (display/poems), EB Garamond (body), Zen Kaku Gothic New (utility/captions/nav). No mono, no grotesque. */
+:root {
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'EB Garamond', Georgia, serif;
+  --font-utility: 'Zen Kaku Gothic New', sans-serif;
+  /* sizes */
+  --size-hero: 3.4rem; /* arrival wordmark */
+  --size-title: 2.3rem; /* section h2 */
+  --size-piece: 1.65rem; /* piece title */
+  --size-path: 1.5rem; /* index path name */
+  --size-poem: 1.5rem;
+  --size-epigraph: 1.35rem;
+  --size-lede: 1.3rem;
+  --size-body: 19px;
+  --size-excerpt: 1rem;
+  --size-caption: 0.68rem; /* nav, whispers, section notes */
+  --size-hint: 0.66rem; /* path hints, mei, store links */
+  --size-meta: 0.62rem; /* piece meta, colophon */
+  /* tracking — utility text is always widely letterspaced, lowercase */
+  --track-hero: 0.42em;
+  --track-mei: 0.55em;
+  --track-whisper: 0.38em;
+  --track-poemtitle: 0.3em;
+  --track-nav: 0.24em;
+  --track-note: 0.22em;
+  --track-meta: 0.2em;
+  --track-hint: 0.16em;
+  /* leading */
+  --leading-body: 1.75;
+  --leading-poem: 2.1;
+  --leading-epigraph: 1.7;
+  --leading-lede: 1.65;
+}

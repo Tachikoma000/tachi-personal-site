@@ -1,0 +1,18 @@
+/* Ma (間) — negative space is a component. Generous, breath-based spacing. */
+:root {
+  --page-max: 640px; /* single quiet column */
+  --page-pad: 1.6rem;
+  --page-bottom: 7rem;
+  --ma-hair: 0.2rem;
+  --ma-breath: 0.9rem;
+  --ma-line: 1.25rem; /* path row padding */
+  --ma-piece: 2rem; /* piece vertical padding */
+  --ma-para: 1.3rem;
+  --ma-section-note: 3.5rem; /* note → content */
+  --ma-topbar: 4.5rem; /* topbar → title */
+  --ma-arrival: 15vh; /* top of arrival page */
+  --ma-epigraph: 4.2rem;
+  --ma-paths: 5.5rem;
+  --ma-colophon: 6rem;
+  --poem-indent: 6%; /* poems sit off-center */
+}

@@ -1,0 +1,11 @@
+/* Motion is slow and painterly: 2s+ color transitions, one draw-on animation, reduced-motion respected. */
+:root {
+  --transition-sky: 2.4s cubic-bezier(0.4, 0.0, 0.2, 1); /* @kind other */ /* hour-change color shifts */
+  --ease-brush: cubic-bezier(0.3, 0, 0.2, 1); /* @kind other */ /* ensō draw-on */
+  --duration-appear: 0.9s; /* @kind other */ /* view fade-up */
+  --duration-hover: 0.4s; /* @kind other */ /* link/nav hovers */
+  --duration-quiet: 0.3s; /* @kind other */
+}
+@keyframes appear { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes drawEnso { to { stroke-dashoffset: 40; } }
+@keyframes ghostIn { to { opacity: 0.28; } }

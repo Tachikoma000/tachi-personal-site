@@ -1,0 +1,11 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: var(--size-body); line-height: var(--leading-body); transition: background var(--transition-sky), color var(--transition-sky); overflow-x: hidden; }
+a { color: var(--accent); text-decoration: none; transition: opacity var(--duration-quiet), color var(--transition-sky); }
+a:hover { opacity: 0.65; }
+a:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
+::selection { background: color-mix(in srgb, var(--accent) 22%, transparent); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; }
+}

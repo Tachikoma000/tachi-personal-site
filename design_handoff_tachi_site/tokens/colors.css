@@ -1,0 +1,25 @@
+/* Tachi color system — no pure black, no pure white, anywhere (Monet avoided black).
+   Base palette + six time-of-day scopes set on <body data-hour="…">. */
+:root {
+  --paper: #F7F2E8; /* warm washi cream */
+  --ink: #33323B; /* blue-black ink */
+  --ink-soft: #5B5963;
+  --hairline: rgba(51, 50, 59, 0.18);
+  --accent: #3D5A80; /* midday indigo — accent shifts with the hour */
+  --sky-a: #A9C3D9; /* bokashi gradient: top */
+  --sky-b: #CDD9DD; /* middle */
+  --sky-c: #F5F1E6; /* fades into paper */
+  --noise-opacity: 0.05; /* @kind other */
+  /* semantic aliases */
+  --surface-page: var(--paper);
+  --text-main: var(--ink);
+  --text-soft: var(--ink-soft);
+  --rule: var(--hairline);
+  --link: var(--accent);
+}
+body[data-hour="dawn"] { --sky-a: #EFC3BC; --sky-b: #F0D9C6; --sky-c: #F7F1E5; --accent: #B8797E; }
+body[data-hour="morning"] { --sky-a: #C5D6E2; --sky-b: #E3E7DD; --sky-c: #F7F2E8; --accent: #6E89A8; }
+body[data-hour="midday"] { --sky-a: #A9C3D9; --sky-b: #CDD9DD; --sky-c: #F5F1E6; --accent: #3D5A80; }
+body[data-hour="dusk"] { --sky-a: #DFAF74; --sky-b: #E4BBA8; --sky-c: #F6EFE2; --accent: #A9713F; }
+body[data-hour="bleue"] { --sky-a: #46557E; --sky-b: #8B90AE; --sky-c: #EFECE4; --accent: #46557E; }
+body[data-hour="night"] { --paper: #232838; --ink: #E7E2D6; --ink-soft: #A9A6B4; --hairline: rgba(231, 226, 214, 0.22); --sky-a: #0E1220; --sky-b: #1A2033; --sky-c: #232838; --accent: #93A7CB; --noise-opacity: 0.035; /* @kind other */ }

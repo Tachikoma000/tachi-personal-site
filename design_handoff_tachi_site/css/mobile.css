@@ -1,0 +1,24 @@
+/* Mobile — the quiet column narrows gracefully. */
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .page { padding: 0 1.25rem var(--page-bottom); }
+  .topbar { padding-top: 1.4rem; margin-bottom: 3rem; }
+  .topnav { gap: 1.05rem; }
+  .topnav a { font-size: 0.62rem; letter-spacing: 0.18em; padding: 0.6rem 0 0.45rem; }
+  .section-title { font-size: 1.9rem; }
+  .section-note { margin-bottom: 2.6rem; }
+  .paths a { padding: 1.05rem 0.1rem; gap: 0.8rem; }
+  .paths .path-name { font-size: 1.3rem; }
+  .paths .path-hint { font-size: 0.6rem; }
+  .piece { padding: 1.6rem 0; }
+  .piece .piece-title { font-size: 1.45rem; }
+  .piece .spot { width: 56px !important; height: 56px !important; }
+  .poem { font-size: 1.3rem; line-height: 1.95; margin-left: 3%; }
+  .epigraph { font-size: 1.2rem; }
+  .mei { display: none; }
+  .dial { gap: 0; padding: 0.25rem 0.4rem; max-width: calc(100vw - 1.6rem); }
+  .dial button { font-size: 0.55rem; letter-spacing: 0.1em; padding: 0.55rem 0.45rem; }
+  .cover { width: 150px !important; flex-basis: 150px !important; }
+  .thread { font-size: 0.64rem; line-height: 2.2; }
+  .colophon { font-size: 0.58rem; letter-spacing: 0.14em; }
+}
