@@ -1,0 +1,105 @@
+/* Tachi prose & structural classes — copied from the living prototype (tachi.html). Components in the bundle are thin wrappers over these. */
+.page { position: relative; z-index: 1; max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-pad) var(--page-bottom); }
+.view { animation: appear var(--duration-appear) ease both; }
+
+.mei { position: fixed; right: 1.4rem; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-mei); color: var(--ink-soft); opacity: 0.5; z-index: 40; user-select: none; transition: color var(--transition-sky); }
+
+.enso { color: var(--accent); transition: color var(--transition-sky); }
+.enso path { stroke: currentColor; fill: none; stroke-linecap: round; }
+.enso .stroke-main { stroke-width: 7.5; opacity: 0.9; }
+.enso .stroke-ghost { stroke-width: 2.5; opacity: 0.28; }
+.enso.animated .stroke-main { stroke-dasharray: 460; stroke-dashoffset: 460; animation: drawEnso 2.6s 0.4s var(--ease-brush) forwards; }
+.enso.animated .stroke-ghost { opacity: 0; animation: ghostIn 1.8s 2.2s ease forwards; }
+
+.whisper { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-whisper); text-transform: lowercase; color: var(--ink-soft); transition: color var(--transition-sky); }
+
+.epigraph { font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: var(--size-epigraph); line-height: var(--leading-epigraph); color: var(--ink-soft); max-width: 26ch; margin: 0 auto; transition: color var(--transition-sky); }
+.epigraph .attr { display: block; font-size: 0.85rem; font-style: normal; letter-spacing: var(--track-meta); margin-top: 1.1rem; opacity: 0.7; }
+
+.paths { text-align: left; }
+.paths a { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: var(--ma-line) 0.2rem; border-top: 1px solid var(--hairline); text-decoration: none; color: var(--ink); transition: color var(--transition-sky), border-color var(--transition-sky), padding-left 0.45s ease; }
+.paths a:last-child { border-bottom: 1px solid var(--hairline); }
+.paths a:hover { opacity: 1; padding-left: 0.8rem; }
+.paths .path-name { font-family: var(--font-display); font-size: var(--size-path); font-weight: 400; }
+.paths .path-hint { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-hint); color: var(--ink-soft); text-align: right; transition: color var(--transition-sky); }
+
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 2rem 0 0; margin-bottom: var(--ma-topbar); }
+.home-mark { width: 34px; height: 34px; color: var(--accent); cursor: pointer; background: none; border: none; padding: 0; transition: color var(--transition-sky), transform 0.5s ease; }
+.home-mark:hover { transform: rotate(-8deg); }
+.home-mark:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; border-radius: 50%; }
+.home-mark svg path { stroke: currentColor; fill: none; stroke-width: 9; stroke-linecap: round; opacity: 0.9; }
+.topnav { display: flex; gap: 1.6rem; }
+.topnav a { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; text-decoration: none; color: var(--ink-soft); padding-bottom: 0.25rem; border-bottom: 1px solid transparent; transition: color var(--duration-hover), border-color var(--duration-hover); }
+.topnav a:hover, .topnav a.here { opacity: 1; color: var(--ink); border-bottom-color: var(--accent); }
+
+.section-title { font-family: var(--font-display); font-weight: 300; font-size: var(--size-title); letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+.section-note { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-note); color: var(--ink-soft); margin-bottom: var(--ma-section-note); transition: color var(--transition-sky); }
+
+.piece { padding: var(--ma-piece) 0; border-top: 1px solid var(--hairline); transition: border-color var(--transition-sky); }
+.piece:last-of-type { border-bottom: 1px solid var(--hairline); }
+a.piece-link { text-decoration: none; transition: border-color var(--transition-sky), padding-left 0.45s ease; }
+a.piece-link:hover { opacity: 1; padding-left: 0.8rem; }
+.piece .piece-title { font-family: var(--font-display); font-size: var(--size-piece); font-weight: 400; line-height: 1.3; }
+.piece .piece-sub { font-style: italic; color: var(--ink-soft); font-size: 1rem; margin-top: 0.2rem; transition: color var(--transition-sky); }
+.piece .piece-excerpt { margin-top: 1.1rem; font-size: var(--size-excerpt); color: var(--ink-soft); max-width: 56ch; transition: color var(--transition-sky); }
+.piece .piece-meta { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-meta); letter-spacing: var(--track-meta); color: var(--accent); margin-top: 1.1rem; transition: color var(--transition-sky); }
+
+.poem { font-family: var(--font-display); font-weight: 400; font-size: var(--size-poem); line-height: var(--leading-poem); margin: 1rem 0 0 var(--poem-indent); }
+.poem em { font-weight: 300; }
+.poem-title { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-poemtitle); color: var(--accent); margin-bottom: 2rem; transition: color var(--transition-sky); }
+
+.dial { display: flex; gap: 0.15rem; background: color-mix(in srgb, var(--paper) 72%, transparent); backdrop-filter: blur(6px); border: 1px solid var(--hairline); border-radius: 999px; padding: 0.3rem 0.55rem; transition: background var(--transition-sky), border-color var(--transition-sky); }
+.dial.floating { position: fixed; left: 50%; bottom: 1.3rem; transform: translateX(-50%); z-index: 60; }
+.dial button { appearance: none; border: none; background: none; font-family: var(--font-utility); font-weight: 300; font-size: 0.6rem; letter-spacing: 0.14em; color: var(--ink-soft); padding: 0.35rem 0.6rem; cursor: pointer; border-radius: 999px; transition: color var(--duration-hover), background var(--duration-hover); }
+.dial button:hover { color: var(--ink); }
+.dial button[aria-pressed="true"] { color: var(--paper); background: var(--accent); }
+.dial button:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 2px; }
+
+.cover { aspect-ratio: 2 / 3.1; border: 1px solid var(--hairline); background: linear-gradient(160deg, var(--sky-b), var(--sky-c)); display: flex; flex-direction: column; justify-content: space-between; padding: 1.4rem 1.1rem; box-shadow: 8px 10px 0 -3px color-mix(in srgb, var(--ink) 7%, transparent); transition: background var(--transition-sky), border-color var(--transition-sky); }
+.cover .cover-title { font-family: var(--font-display); font-weight: 400; font-size: 1.45rem; line-height: 1.25; }
+.cover .cover-author { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-meta); letter-spacing: 0.34em; color: var(--ink-soft); transition: color var(--transition-sky); }
+.stores { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+.stores a { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-meta); color: var(--accent); text-decoration: none; padding-bottom: 0.2rem; border-bottom: 1px solid var(--accent); transition: opacity var(--duration-quiet), color var(--transition-sky), border-color var(--transition-sky); }
+.stores a:hover { opacity: 0.65; }
+
+.lede { font-family: var(--font-display); font-style: italic; font-size: var(--size-lede); line-height: var(--leading-lede); color: var(--ink); }
+.thread { padding: 1.4rem 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); font-family: var(--font-utility); font-weight: 300; font-size: 0.7rem; letter-spacing: var(--track-nav); line-height: 2.4; color: var(--ink-soft); transition: color var(--transition-sky), border-color var(--transition-sky); }
+
+.colophon { padding-top: 1.6rem; border-top: 1px solid var(--hairline); font-family: var(--font-utility); font-weight: 300; font-size: var(--size-meta); letter-spacing: 0.18em; line-height: 2.2; color: var(--ink-soft); text-align: center; transition: color var(--transition-sky), border-color var(--transition-sky); }
+
+.quiet-field { display: flex; align-items: baseline; gap: 1.2rem; border-bottom: 1px solid var(--hairline); padding-bottom: 0.5rem; max-width: 34ch; transition: border-color var(--transition-sky); }
+.quiet-field input { flex: 1; appearance: none; border: none; background: none; font-family: var(--font-body); font-size: 1rem; color: var(--ink); padding: 0.2rem 0; outline: none; }
+.quiet-field input::placeholder { color: var(--ink-soft); opacity: 0.7; font-style: italic; }
+.quiet-field button { appearance: none; border: none; background: none; cursor: pointer; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-meta); text-transform: lowercase; color: var(--accent); padding: 0; transition: opacity var(--duration-quiet); }
+.quiet-field button:hover { opacity: 0.65; }
+.quiet-field:focus-within { border-bottom-color: var(--accent); }
+
+/* ————— production additions — values promoted from the handoff .ref.jsx inline styles ————— */
+.piece-meta strong { font-weight: 500; }
+a.home-mark { display: inline-block; }
+.back-link { display: inline-block; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; color: var(--ink-soft); margin-bottom: 2.2rem; }
+.author-note { margin-bottom: 2.8rem; padding-bottom: 2.4rem; border-bottom: 1px solid var(--hairline); }
+.author-note .note-label { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-poemtitle); text-transform: lowercase; color: var(--accent); margin-bottom: 1.4rem; }
+.author-note p { font-style: italic; color: var(--ink-soft); margin-bottom: var(--ma-para); max-width: 56ch; }
+.author-note p:last-child { margin-bottom: 0; }
+.stanza-gap { display: block; height: 1.6rem; }
+.essay p { margin-bottom: var(--ma-para); max-width: 58ch; }
+.essay h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; letter-spacing: 0.04em; margin: 2.8rem 0 1.1rem; }
+.essay img { width: 100%; max-width: 58ch; display: block; margin: 2rem 0; border: 1px solid var(--hairline); }
+.essay .essay-sig { margin-top: 2.4rem; }
+.book-detail { display: flex; gap: 2.6rem; align-items: flex-start; flex-wrap: wrap; }
+.book-detail .col { flex: 1 1 300px; }
+.book-detail p { margin-bottom: 1.2rem; max-width: 54ch; }
+.book-detail .stores { margin-top: 1.8rem; }
+.about p { margin-bottom: var(--ma-para); max-width: 58ch; }
+.about .about-lede { font-family: var(--font-display); font-style: italic; font-size: 1.35rem; line-height: 1.65; margin-bottom: 1.6rem; max-width: none; }
+.about .about-motto { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; margin-bottom: 1.6rem; }
+.about .thread { margin: 2.4rem 0; }
+.about .works-title { margin-top: 3.5rem; font-size: 1.7rem; }
+.about .works-group { margin-top: 1.8rem; }
+.about .works-group-label { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-poemtitle); text-transform: lowercase; color: var(--accent); margin-bottom: 0.4rem; }
+.about .work-row { padding: 1.1rem 0.2rem; border-top: 1px solid var(--hairline); transition: border-color var(--transition-sky); }
+.about .work-title { font-size: 1.05rem; }
+.about .work-sub { font-style: italic; color: var(--ink-soft); font-size: 0.9rem; margin-top: 0.15rem; }
+.about .work-links { margin-top: 0.6rem; }
+.not-found { text-align: center; padding-top: 18vh; }
