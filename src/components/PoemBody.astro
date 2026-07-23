@@ -1,0 +1,24 @@
+---
+import Spot from './Spot.astro';
+import { parsePoem, renderLine } from '../lib/poem';
+
+interface Props {
+  body: string;
+  tailpiece?: string;
+}
+const { body, tailpiece } = Astro.props;
+const stanzas = parsePoem(body);
+---
+<div class="poem">
+  {stanzas.map((st) => {
+    const html = st.lines.map((line) => renderLine(line) + '<br>').join('');
+    return (
+      <>
+        {st.italic ? <em set:html={html} /> : <Fragment set:html={html} />}
+        <span class="stanza-gap"></span>
+      </>
+    );
+  })}
+  <em>— tachi</em>
+</div>
+{tailpiece && <Spot name={tailpiece} size={72} style="margin:3.2rem auto 0" />}

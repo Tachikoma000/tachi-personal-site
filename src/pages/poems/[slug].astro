@@ -1,0 +1,31 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import AuthorNote from '../../components/AuthorNote.astro';
+import PoemBody from '../../components/PoemBody.astro';
+import { withBase } from '../../lib/url';
+
+export async function getStaticPaths() {
+  const poems = await getCollection('poems');
+  return poems.map((poem) => ({ params: { slug: poem.id }, props: { poem } }));
+}
+const { poem } = Astro.props;
+const note = await getEntry('poemNotes', poem.id);
+const NoteContent = note ? (await render(note)).Content : null;
+---
+<Base title={`${poem.data.title} — tachi`} description={poem.data.excerpt} ogType="article">
+  <section class="view">
+    <TopBar active="poems" />
+    <a class="back-link" href={withBase('/poems/')}>← the shorter breaths</a>
+    <SectionHeading title={poem.data.title} note={poem.data.sub} />
+    {NoteContent && (
+      <AuthorNote label="a note from the author">
+        <NoteContent />
+        <p>With love and gratitude,<br />Tachi</p>
+      </AuthorNote>
+    )}
+    <PoemBody body={poem.body ?? ''} tailpiece={poem.data.tailpiece ?? poem.data.illustration} />
+  </section>
+</Base>

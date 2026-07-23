@@ -1,0 +1,25 @@
+---
+import Spot from './Spot.astro';
+import { withBase } from '../lib/url';
+
+interface Props {
+  active?: 'poems' | 'writings' | 'books' | 'about';
+}
+const { active } = Astro.props;
+const items = [
+  { id: 'poems', label: 'poems', href: '/poems/' },
+  { id: 'writings', label: 'writings', href: '/writings/' },
+  { id: 'books', label: 'books', href: '/books/' },
+  { id: 'about', label: 'about', href: '/about/' },
+] as const;
+---
+<div class="topbar">
+  <a class="home-mark" aria-label="Return to arrival" href={withBase('/')}>
+    <Spot name="bird-creature" size={34} />
+  </a>
+  <nav class="topnav">
+    {items.map((it) => (
+      <a href={withBase(it.href)} class={active === it.id ? 'here' : undefined}>{it.label}</a>
+    ))}
+  </nav>
+</div>
