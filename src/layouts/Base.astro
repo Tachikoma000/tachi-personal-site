@@ -1,0 +1,65 @@
+---
+import '@fontsource/cormorant-garamond/300.css';
+import '@fontsource/cormorant-garamond/400.css';
+import '@fontsource/cormorant-garamond/500.css';
+import '@fontsource/cormorant-garamond/300-italic.css';
+import '@fontsource/cormorant-garamond/400-italic.css';
+import '@fontsource/eb-garamond/400.css';
+import '@fontsource/eb-garamond/500.css';
+import '@fontsource/eb-garamond/400-italic.css';
+import '@fontsource/zen-kaku-gothic-new/300.css';
+import '@fontsource/zen-kaku-gothic-new/400.css';
+import '../styles/global.css';
+import Sky from '../components/Sky.astro';
+import Washi from '../components/Washi.astro';
+import HourDial from '../components/HourDial.astro';
+import { withBase } from '../lib/url';
+
+interface Props {
+  title: string;
+  description: string;
+  ogType?: 'website' | 'article';
+}
+const { title, description, ogType = 'website' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    <link rel="alternate" type="application/rss+xml" title="tachi" href={withBase('/rss.xml')} />
+    <link rel="sitemap" href={withBase('/sitemap-index.xml')} />
+  </head>
+  <body data-hour="midday">
+    <script is:inline>
+      (function () {
+        var h = null;
+        try {
+          h = sessionStorage.getItem('tachi-hour');
+        } catch (e) {}
+        var VALID = ['dawn', 'morning', 'midday', 'dusk', 'bleue', 'night'];
+        if (VALID.indexOf(h) === -1) {
+          var n = new Date().getHours();
+          h =
+            n >= 5 && n < 8 ? 'dawn'
+            : n >= 8 && n < 12 ? 'morning'
+            : n >= 12 && n < 16 ? 'midday'
+            : n >= 16 && n < 19 ? 'dusk'
+            : n >= 19 && n < 21 ? 'bleue'
+            : 'night';
+        }
+        document.body.setAttribute('data-hour', h);
+      })();
+    </script>
+    <Sky />
+    <Washi />
+    <main class="page"><slot /></main>
+    <HourDial />
+  </body>
+</html>

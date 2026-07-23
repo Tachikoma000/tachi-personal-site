@@ -1,0 +1,17 @@
+---
+import { withBase } from '../lib/url';
+
+interface Props {
+  paths: { href: string; name: string; hint?: string }[];
+  style?: string;
+}
+const { paths, style } = Astro.props;
+---
+<nav class="paths" aria-label="Site sections" style={style}>
+  {paths.map((p) => (
+    <a href={withBase(p.href)}>
+      <span class="path-name">{p.name}</span>
+      {p.hint && <span class="path-hint">{p.hint}</span>}
+    </a>
+  ))}
+</nav>

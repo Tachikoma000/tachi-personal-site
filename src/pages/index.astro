@@ -1,3 +1,23 @@
 ---
+import Base from '../layouts/Base.astro';
+import Spot from '../components/Spot.astro';
+import Epigraph from '../components/Epigraph.astro';
+import PathList from '../components/PathList.astro';
 ---
-<html lang="en"><head><meta charset="UTF-8" /><title>tachi</title></head><body><h1>tachi</h1></body></html>
+<Base title="tachi — handles, not halos" description="writings · poems · musings · beauty — the personal site of the writer tachi">
+  <section class="view" style="text-align:center;padding-top:15vh">
+    <Spot name="bird-creature" size={104} style="margin:0 auto 2.2rem" />
+    <h1 style="font-family:var(--font-display);font-weight:300;font-size:var(--size-hero);letter-spacing:var(--track-hero);text-indent:var(--track-hero);text-transform:lowercase;transition:color var(--transition-sky)">tachi</h1>
+    <p class="whisper" style="margin-top:0.9rem">writings · poems · musings · beauty</p>
+    <Epigraph attribution="the knock" style="margin-top:4.2rem;max-width:none">“The best of it arrives. It is not made.”</Epigraph>
+    <PathList
+      style="margin-top:5.5rem"
+      paths={[
+        { href: '/poems/', name: 'Poems', hint: 'the shorter breaths' },
+        { href: '/writings/', name: 'Writings', hint: 'essays & musings' },
+        { href: '/books/', name: 'Books', hint: 'the longer works' },
+        { href: '/about/', name: 'About', hint: 'the hand behind the ink' },
+      ]}
+    />
+  </section>
+</Base>

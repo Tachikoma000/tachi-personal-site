@@ -1,0 +1,14 @@
+---
+import { withBase } from '../lib/url';
+
+interface Props {
+  name: string;
+  size?: number;
+  style?: string;
+  alt?: string;
+}
+const { name, size = 88, style, alt = '' } = Astro.props;
+---
+<span class="spot" style={`width:${size}px;height:${size}px;${style ?? ''}`} aria-hidden={alt ? undefined : 'true'}>
+  <img src={withBase(`/illustrations/${name}.svg`)} alt={alt} />
+</span>

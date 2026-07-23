@@ -1,0 +1,11 @@
+---
+interface Props {
+  attribution?: string;
+  style?: string;
+}
+const { attribution, style } = Astro.props;
+---
+<blockquote class="epigraph" style={style}>
+  <slot />
+  {attribution && <span class="attr">{`— ${attribution}`}</span>}
+</blockquote>

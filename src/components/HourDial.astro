@@ -1,0 +1,36 @@
+---
+const HOURS = [
+  ['dawn', 'dawn'],
+  ['morning', 'morning'],
+  ['midday', 'midday'],
+  ['dusk', 'dusk'],
+  ['bleue', 'l’heure bleue'],
+  ['night', 'night'],
+] as const;
+---
+<div class="dial floating" role="group" aria-label="Preview the light at different hours">
+  {HOURS.map(([id, label]) => (
+    <button data-hour={id} aria-pressed="false">{label}</button>
+  ))}
+</div>
+
+<script>
+  const KEY = 'tachi-hour';
+  const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('.dial button'));
+
+  const sync = () => {
+    const current = document.body.dataset.hour;
+    for (const b of buttons) b.setAttribute('aria-pressed', String(b.dataset.hour === current));
+  };
+
+  for (const btn of buttons) {
+    btn.addEventListener('click', () => {
+      document.body.dataset.hour = btn.dataset.hour!;
+      try {
+        sessionStorage.setItem(KEY, btn.dataset.hour!);
+      } catch {}
+      sync();
+    });
+  }
+  sync();
+</script>
