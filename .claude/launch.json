@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tachi-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["astro", "dev", "--port", "4321"],
+      "port": 4321
+    },
+    {
+      "name": "tachi-static",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [".preview/serve.mjs"],
+      "port": 4322
+    }
+  ]
+}
