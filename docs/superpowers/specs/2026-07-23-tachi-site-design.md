@@ -108,7 +108,7 @@ Same frontmatter shape (meta renders "essay · 2026"). The `excerpt` for The Kno
 Optional plain-markdown file; paragraphs render italic soft-ink. Labels and sign-offs live in templates per collection:
 - Poems: label "a note from the author, before the poem", sign-off "With love and gratitude, / Tachi".
 - Writings: label "a note, before we begin", sign-off "— tachi".
-- (Post-launch evolution, approved 2026-07-23:) label weight 400 at 0.7rem, and a "↓ the poem" / "↓ the essay" continuation whisper closes the note block — wayfinding for long notes.
+- (Post-launch evolution, approved 2026-07-23:) label weight 400 at 0.7rem for presence. Wayfinding for long notes is a **continue beacon**: a fixed pill (dial's visual language — 72% paper + blur, hairline, 999px) at the right edge, vertically centered, reading "the poem" / "the essay". It smooth-scrolls to the piece on click (anchor fallback without JS; instant under reduced motion) and fades out over 0.9s via IntersectionObserver once the piece enters the top 60% of the viewport, returning if the reader scrolls back. Rendered only on pages with a note, as a sibling of `section.view` (the view's transform animation would otherwise capture `position: fixed`).
 
 ### Books (`content/books/<slug>.yaml`)
 

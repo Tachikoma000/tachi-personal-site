@@ -5,11 +5,12 @@ import { parsePoem, renderLine } from '../lib/poem';
 interface Props {
   body: string;
   tailpiece?: string;
+  id?: string;
 }
-const { body, tailpiece } = Astro.props;
+const { body, tailpiece, id } = Astro.props;
 const stanzas = parsePoem(body);
 ---
-<div class="poem">
+<div class="poem" id={id}>
   {stanzas.map((st) => {
     const html = st.lines.map((line) => renderLine(line) + '<br>').join('');
     return (

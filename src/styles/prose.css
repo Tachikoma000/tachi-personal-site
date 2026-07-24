@@ -82,7 +82,12 @@ a.home-mark { display: inline-block; }
 .author-note .note-label { font-family: var(--font-utility); font-weight: 400; font-size: 0.7rem; letter-spacing: var(--track-poemtitle); text-transform: lowercase; color: var(--accent); margin-bottom: 1.4rem; }
 .author-note p { font-style: italic; color: var(--ink-soft); margin-bottom: var(--ma-para); max-width: 56ch; }
 .author-note p:last-child { margin-bottom: 0; }
-.author-note .note-continue { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-nav); text-transform: lowercase; color: var(--ink-soft); margin-top: 2.2rem; transition: color var(--transition-sky); }
+.beacon { position: fixed; right: 1.4rem; top: 50%; transform: translateY(-50%); z-index: 60; font-family: var(--font-utility); font-weight: 300; font-size: 0.6rem; letter-spacing: 0.14em; text-transform: lowercase; color: var(--ink-soft); background: color-mix(in srgb, var(--paper) 72%, transparent); backdrop-filter: blur(6px); border: 1px solid var(--hairline); border-radius: 999px; padding: 0.5rem 0.85rem; text-decoration: none; transition: opacity 0.9s ease, color var(--duration-hover), background var(--transition-sky), border-color var(--transition-sky); }
+.beacon:hover { opacity: 1; color: var(--ink); }
+.beacon.gone { opacity: 0; pointer-events: none; }
+@media (max-width: 640px) {
+  .beacon { right: 0.6rem; padding: 0.45rem 0.7rem; font-size: 0.55rem; }
+}
 .stanza-gap { display: block; height: 1.6rem; }
 .essay p { margin-bottom: var(--ma-para); max-width: 58ch; }
 .essay h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; letter-spacing: 0.04em; margin: 2.8rem 0 1.1rem; }

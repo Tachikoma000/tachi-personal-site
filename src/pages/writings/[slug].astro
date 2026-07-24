@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import TopBar from '../../components/TopBar.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import AuthorNote from '../../components/AuthorNote.astro';
+import ContinueBeacon from '../../components/ContinueBeacon.astro';
 import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
@@ -21,16 +22,17 @@ const NoteContent = note ? (await render(note)).Content : null;
     <a class="back-link" href={withBase('/writings/')}>← the writings</a>
     <SectionHeading title={writing.data.title} note={writing.data.sub} />
     {NoteContent && (
-      <AuthorNote label="a note, before we begin" continueLabel="the essay">
+      <AuthorNote label="a note, before we begin">
         <NoteContent />
         <p>— tachi</p>
       </AuthorNote>
     )}
-    <div class="essay">
+    <div class="essay" id="the-essay">
       <Content />
       {writing.data.signoff && (
         <p class="essay-sig">{writing.data.signoff}<br /><em>Tachi</em></p>
       )}
     </div>
   </section>
+  {NoteContent && <ContinueBeacon label="the essay" target="the-essay" />}
 </Base>

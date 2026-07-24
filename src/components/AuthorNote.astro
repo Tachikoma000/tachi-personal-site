@@ -1,12 +1,9 @@
 ---
 interface Props {
   label: string;
-  continueLabel?: string;
 }
-const { label, continueLabel } = Astro.props;
 ---
 <div class="author-note">
-  <div class="note-label">{label}</div>
+  <div class="note-label">{Astro.props.label}</div>
   <slot />
-  {continueLabel && <div class="note-continue">↓ {continueLabel}</div>}
 </div>
