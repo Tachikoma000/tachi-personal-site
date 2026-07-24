@@ -79,15 +79,25 @@ a.piece-link:hover { opacity: 1; padding-left: 0.8rem; }
 a.home-mark { display: inline-block; }
 .back-link { display: inline-block; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; color: var(--ink-soft); margin-bottom: 2.2rem; }
 .author-note { margin-bottom: 2.8rem; padding-bottom: 2.4rem; border-bottom: 1px solid var(--hairline); }
-.author-note .note-label { font-family: var(--font-utility); font-weight: 400; font-size: 0.7rem; letter-spacing: var(--track-poemtitle); text-transform: lowercase; color: var(--accent); margin-bottom: 1.4rem; }
+.author-note .note-label { font-family: var(--font-utility); font-weight: 400; font-size: 0.7rem; letter-spacing: var(--track-poemtitle); text-transform: lowercase; color: var(--accent); }
 .author-note p { font-style: italic; color: var(--ink-soft); margin-bottom: var(--ma-para); max-width: 56ch; }
 .author-note p:last-child { margin-bottom: 0; }
-.beacon { position: fixed; right: 1.4rem; top: 50%; transform: translateY(-50%); z-index: 60; font-family: var(--font-utility); font-weight: 300; font-size: 0.6rem; letter-spacing: 0.14em; text-transform: lowercase; color: var(--ink-soft); background: color-mix(in srgb, var(--paper) 72%, transparent); backdrop-filter: blur(6px); border: 1px solid var(--hairline); border-radius: 999px; padding: 0.5rem 0.85rem; text-decoration: none; transition: opacity 0.9s ease, color var(--duration-hover), background var(--transition-sky), border-color var(--transition-sky); }
-.beacon:hover { opacity: 1; color: var(--ink); }
-.beacon.gone { opacity: 0; pointer-events: none; }
-@media (max-width: 640px) {
-  .beacon { right: 0.6rem; padding: 0.45rem 0.7rem; font-size: 0.55rem; }
-}
+
+/* skip-note indicator — designer spec 2026-07-24 (head skip + bridge) */
+.note-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.4rem; }
+.skip-note { appearance: none; border: none; background: none; cursor: pointer; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-meta); text-transform: lowercase; color: var(--ink-soft); padding: 0 0 0.2rem; border-bottom: 1px solid var(--hairline); transition: color 0.4s, border-color 0.4s; white-space: nowrap; flex: none; margin-left: auto; animation: skipBreathe 4.5s ease-in-out infinite; }
+.skip-note .arr { display: inline-block; animation: skipDrift 3.8s ease-in-out infinite; }
+.skip-note:hover { opacity: 1; color: var(--accent); border-bottom-color: var(--accent); }
+.skip-note:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
+@keyframes skipBreathe { 0%, 100% { color: var(--ink-soft); border-bottom-color: var(--hairline); } 50% { color: var(--accent); border-bottom-color: var(--accent); } }
+@keyframes skipDrift { 0%, 55%, 100% { transform: translateY(0); } 70% { transform: translateY(3px); } 85% { transform: translateY(0); } }
+
+.note-bridge { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin: 1.9rem auto 0; appearance: none; border: none; background: none; cursor: pointer; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-poemtitle); text-transform: lowercase; color: var(--ink-soft); transition: color 0.4s; }
+.note-bridge:hover { opacity: 1; color: var(--accent); }
+.note-bridge:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
+.note-bridge .stem { width: 1px; height: 26px; background: var(--hairline); position: relative; overflow: hidden; }
+.note-bridge .stem::after { content: ""; position: absolute; left: 0; top: -40%; width: 100%; height: 40%; background: var(--accent); animation: stemRain 3.6s ease-in-out infinite; }
+@keyframes stemRain { 0% { top: -40%; } 60%, 100% { top: 110%; } }
 .stanza-gap { display: block; height: 1.6rem; }
 .essay p { margin-bottom: var(--ma-para); max-width: 58ch; }
 .essay h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; letter-spacing: 0.04em; margin: 2.8rem 0 1.1rem; }

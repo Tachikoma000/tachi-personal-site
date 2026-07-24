@@ -1,9 +1,40 @@
 ---
+// Author's note with the skip-note indicator (designer spec 2026-07-24):
+// head row = label left + "to the poem ↓" skip right; bridge = centered
+// label + stem at the note's end. Anchors (spec-sanctioned alternative to
+// buttons) keep a working no-JS fallback; JS prevents the URL change and
+// applies the -24px landing offset.
 interface Props {
   label: string;
+  skipLabel: string; // e.g. "to the poem"
+  bridgeLabel: string; // e.g. "the poem"
+  target: string; // id of the piece wrapper
 }
+const { label, skipLabel, bridgeLabel, target } = Astro.props;
 ---
 <div class="author-note">
-  <div class="note-label">{Astro.props.label}</div>
+  <div class="note-head">
+    <span class="note-label">{label}</span>
+    <a class="skip-note" href={`#${target}`} data-target={target}>{skipLabel} <span class="arr">↓</span></a>
+  </div>
   <slot />
+  <a class="note-bridge" href={`#${target}`} data-target={target}>
+    <span>{bridgeLabel}</span>
+    <span class="stem"></span>
+  </a>
 </div>
+
+<script>
+  for (const control of document.querySelectorAll<HTMLAnchorElement>('.skip-note, .note-bridge')) {
+    control.addEventListener('click', (e) => {
+      const el = document.getElementById(control.dataset.target!);
+      if (!el) return; // fall through to plain anchor navigation
+      e.preventDefault();
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({
+        top: el.getBoundingClientRect().top + window.scrollY - 24,
+        behavior: reduced ? 'auto' : 'smooth',
+      });
+    });
+  }
+</script>
