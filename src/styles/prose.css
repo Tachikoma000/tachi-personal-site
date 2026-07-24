@@ -98,6 +98,14 @@ a.home-mark { display: inline-block; }
 .note-bridge .stem { width: 1px; height: 26px; background: var(--hairline); position: relative; overflow: hidden; }
 .note-bridge .stem::after { content: ""; position: absolute; left: 0; top: -40%; width: 100%; height: 40%; background: var(--accent); animation: stemRain 3.6s ease-in-out infinite; }
 @keyframes stemRain { 0% { top: -40%; } 60%, 100% { top: 110%; } }
+
+/* mobile head layout (V2, approved 2026-07-24): short label + skip share one
+   line; if even that must wrap (very narrow), the control stacks left-aligned
+   under the label instead of orphaning right. */
+@media (max-width: 640px) {
+  .note-label .note-clause { display: none; }
+  .skip-note { margin-left: 0; }
+}
 .stanza-gap { display: block; height: 1.6rem; }
 .essay p { margin-bottom: var(--ma-para); max-width: 58ch; }
 .essay h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; letter-spacing: 0.04em; margin: 2.8rem 0 1.1rem; }
