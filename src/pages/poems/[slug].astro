@@ -21,7 +21,7 @@ const NoteContent = note ? (await render(note)).Content : null;
     <a class="back-link" href={withBase('/poems/')}>← the shorter breaths</a>
     <SectionHeading title={poem.data.title} note={poem.data.sub} />
     {NoteContent && (
-      <AuthorNote label="a note from the author">
+      <AuthorNote label="a note from the author, before the poem" continueLabel="the poem">
         <NoteContent />
         <p>With love and gratitude,<br />Tachi</p>
       </AuthorNote>

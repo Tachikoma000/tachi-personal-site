@@ -105,9 +105,10 @@ Same frontmatter shape (meta renders "essay · 2026"). The `excerpt` for The Kno
 
 ### Author's notes (`note.md` beside `index.md`)
 
-Optional plain-markdown file; paragraphs render italic soft-ink. Labels and sign-offs live in templates per collection, exactly as prototyped:
-- Poems: label "a note from the author", sign-off "With love and gratitude, / Tachi".
+Optional plain-markdown file; paragraphs render italic soft-ink. Labels and sign-offs live in templates per collection:
+- Poems: label "a note from the author, before the poem", sign-off "With love and gratitude, / Tachi".
 - Writings: label "a note, before we begin", sign-off "— tachi".
+- (Post-launch evolution, approved 2026-07-23:) label weight 400 at 0.7rem, and a "↓ the poem" / "↓ the essay" continuation whisper closes the note block — wayfinding for long notes.
 
 ### Books (`content/books/<slug>.yaml`)
 
