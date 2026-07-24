@@ -106,6 +106,22 @@ a.home-mark { display: inline-block; }
   .note-label .note-clause { display: none; }
   .skip-note { margin-left: 0; }
 }
+
+/* hour word (approved 2026-07-24, replaces the floating dial): the active
+   hour as a quiet word beside the home mark; tap cycles to the next hour. */
+.topbar-left { display: flex; align-items: center; gap: 1.1rem; }
+.hour-word { appearance: none; border: none; background: none; cursor: pointer; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; color: var(--ink-soft); padding: 0.25rem 0; transition: color var(--duration-hover); }
+.hour-word:hover { color: var(--ink); }
+.hour-word:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
+.hour-word .hw-short { display: none; }
+.arrival-hour { position: absolute; top: 2rem; right: 1.6rem; z-index: 5; }
+@media (max-width: 640px) {
+  .topbar-left { gap: 0.8rem; }
+  .hour-word { font-size: 0.62rem; letter-spacing: 0.18em; }
+  .hour-word .hw-full { display: none; }
+  .hour-word .hw-short { display: inline; }
+  .arrival-hour { top: 1.4rem; right: 1.25rem; }
+}
 .stanza-gap { display: block; height: 1.6rem; }
 .essay p { margin-bottom: var(--ma-para); max-width: 58ch; }
 .essay h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; letter-spacing: 0.04em; margin: 2.8rem 0 1.1rem; }

@@ -3,8 +3,10 @@ import Base from '../layouts/Base.astro';
 import Spot from '../components/Spot.astro';
 import Epigraph from '../components/Epigraph.astro';
 import PathList from '../components/PathList.astro';
+import HourWord from '../components/HourWord.astro';
 ---
 <Base title="tachi — handles, not halos" description="writings · poems · musings · beauty — the personal site of the writer tachi">
+  <div class="arrival-hour"><HourWord /></div>
   <section class="view" style="text-align:center;padding-top:15vh">
     <Spot name="bird-creature" size={104} style="margin:0 auto 2.2rem" />
     <h1 style="font-family:var(--font-display);font-weight:300;font-size:var(--size-hero);letter-spacing:var(--track-hero);text-indent:var(--track-hero);text-transform:lowercase;transition:color var(--transition-sky)">tachi</h1>

@@ -1,0 +1,35 @@
+---
+// Cycling hour control (owner-approved evolution 2026-07-24; replaces the
+// floating dial, which obstructed content). The word displays the active
+// hour and advances to the next one on tap — display and control in one.
+// SSR text matches the body's data-hour fallback; script syncs pre-interaction.
+---
+<button class="hour-word" aria-live="polite" aria-label="Preview the light at another hour">
+  <span class="hw-full">midday</span><span class="hw-short">midday</span>
+</button>
+
+<script>
+  const ORDER: string[] = ['dawn', 'morning', 'midday', 'dusk', 'bleue', 'night'];
+  const FULL: Record<string, string> = { dawn: 'dawn', morning: 'morning', midday: 'midday', dusk: 'dusk', bleue: 'l’heure bleue', night: 'night' };
+  const SHORT: Record<string, string> = { ...FULL, bleue: 'bleue' };
+
+  for (const word of document.querySelectorAll<HTMLButtonElement>('.hour-word')) {
+    const full = word.querySelector('.hw-full')!;
+    const short = word.querySelector('.hw-short')!;
+    const paint = () => {
+      const h = document.body.dataset.hour ?? 'midday';
+      full.textContent = FULL[h] ?? h;
+      short.textContent = SHORT[h] ?? h;
+    };
+    word.addEventListener('click', () => {
+      const current = document.body.dataset.hour ?? 'midday';
+      const next = ORDER[(ORDER.indexOf(current) + 1) % ORDER.length];
+      document.body.dataset.hour = next;
+      try {
+        sessionStorage.setItem('tachi-hour', next);
+      } catch {}
+      paint();
+    });
+    paint();
+  }
+</script>

@@ -148,7 +148,7 @@ Lives in the arrival page template (wordmark, whisper line, epigraph "“The bes
 
 - Palettes, boundaries, and transitions exactly per `tokens/colors.css` + handoff README: `dawn 5–8, morning 8–12, midday 12–16, dusk 16–19, bleue 19–21, night otherwise`; all color change over 2.4s.
 - **Pre-paint script** (small, inline in `<head>`, render-blocking by design): `data-hour = sessionStorage override ?? hourOf(new Date())`. No palette flash, no on-load transition.
-- **Dial** (vanilla JS): click → set `body[data-hour]`, update `aria-pressed`, write sessionStorage. Override persists across pages within the visit; next visit returns to the clock (the dial is a *preview*, per README).
+- **Hour control** (owner-approved evolution 2026-07-24, replacing the prototype's floating bottom dial, which obstructed content): the **hour word** — the active hour's name as a quiet button beside the home mark in the topbar (alone in the top-right corner on arrival, which has no topbar). Tap cycles dawn → morning → midday → dusk → l'heure bleue → night → around; the word is both display and control. Mobile shows "bleue" for l'heure bleue. Same persistence contract: sessionStorage for the visit, clock on the next.
 - `prefers-reduced-motion`: animations disabled by the existing CSS rule; instant color changes remain (README allows).
 
 ## 4. Components & styling port
