@@ -94,6 +94,7 @@ Body = the poem as written. Parsing rules (custom loader, unit-tested):
 - `*text*` within a line → `<em>` (Cormorant 300 italic per `.poem em`). A stanza entirely wrapped in `*…*` reproduces the prototype's italic-stanza mechanism.
 - All characters verbatim — curly quotes, em-dashes, "jumped(all of us," quirks. Files are UTF-8; no smart-quote transformation is applied.
 - Detail page ends with `— tachi` em line + tailpiece spot (72px, centered, 3.2rem above), per prototype.
+- (2026-07-24:) each verse line renders as a block with a **1.5em hanging indent** — overflow continuations indent, so flush-left always means an authored line start and stanza shape survives narrow screens. Inert when nothing wraps.
 
 ### Writings (`content/writings/<slug>/index.md`)
 

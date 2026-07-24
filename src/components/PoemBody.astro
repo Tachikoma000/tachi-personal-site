@@ -12,10 +12,12 @@ const stanzas = parsePoem(body);
 ---
 <div class="poem" id={id}>
   {stanzas.map((st) => {
-    const html = st.lines.map((line) => renderLine(line) + '<br>').join('');
+    const lines = st.lines.map((line) => renderLine(line));
     return (
       <>
-        {st.italic ? <em set:html={html} /> : <Fragment set:html={html} />}
+        {st.italic
+          ? <em>{lines.map((html) => <span class="poem-line" set:html={html} />)}</em>
+          : lines.map((html) => <span class="poem-line" set:html={html} />)}
         <span class="stanza-gap"></span>
       </>
     );

@@ -24,9 +24,13 @@ const norm = (s) => s.normalize('NFC').replace(/\s+/g, ' ').trim();
 
 function page(rel) {
   const $ = load(readFileSync(path.join('dist', rel), 'utf8'));
-  // <br> renders as a line break but contributes no whitespace to .text();
-  // replace with a space so extracted text matches space-joined expectations.
+  // <br> and block-level .poem-line spans render as line breaks but contribute
+  // no whitespace to .text(); add separators so extracted text matches
+  // space-joined expectations.
   $('br').replaceWith(' ');
+  $('.poem-line').each((_, el) => {
+    $(el).append(' ');
+  });
   return $;
 }
 
