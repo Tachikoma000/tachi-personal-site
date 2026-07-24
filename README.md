@@ -4,7 +4,7 @@ The personal literary site of Tachi (pen name of Jephthah Akene): poems, essays,
 books, and an about page in a quiet, gallery-like space. The page's sky, accent,
 and (at night) paper shift with the visitor's local hour.
 
-Live: https://tachikoma000.github.io/tachi-personal-site/
+Live: https://tachi.ink
 
 ## Adding a new piece
 
@@ -42,17 +42,18 @@ Requires Node ≥ 22.12 (a `.nvmrc` pins 24 — `nvm use` picks it up).
 
 ```bash
 npm install
-npm run dev        # http://localhost:4321/tachi-personal-site/
+npm run dev        # http://localhost:4321/
 npm test           # poem parser tests
 npm run build && npm run fidelity   # verbatim-content check against the design handoff
 ```
 
-## Custom domain (when ready)
+## Domain
 
-1. In `astro.config.mjs`: set `site` to `https://yourdomain.com`, delete the `base` line.
-2. GitHub repo → Settings → Pages → Custom domain (creates the CNAME); add the
-   DNS records GitHub shows you; enable "Enforce HTTPS".
-3. Push. Done.
+The site lives at **tachi.ink** (configured 2026-07-24): four A records +
+`www` CNAME at name.com point to GitHub Pages; `public/CNAME` and the Pages
+settings both carry the domain; `site` in `astro.config.mjs` is the single
+source for every absolute URL (OG tags, RSS, sitemap). The old
+tachikoma000.github.io/tachi-personal-site URL redirects here permanently.
 
 ## Design source
 
