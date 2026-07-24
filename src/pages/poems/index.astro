@@ -6,23 +6,39 @@ import SectionHeading from '../../components/SectionHeading.astro';
 import PieceEntry from '../../components/PieceEntry.astro';
 import { withBase } from '../../lib/url';
 
-const poems = (await getCollection('poems')).sort((a, b) => a.data.order - b.data.order);
+const poems = await getCollection('poems');
+const FAMILIES = [
+  { key: 'telling', label: 'the long tellings' },
+  { key: 'breath', label: 'the short breaths' },
+] as const;
 ---
 <Base title="poems — tachi" description="the shorter breaths — poems by tachi">
   <section class="view">
     <TopBar active="poems" />
     <SectionHeading title="Poems" note="the shorter breaths" />
-    {poems.map((p) => (
-      <PieceEntry
-        title={p.data.title}
-        sub={p.data.sub}
-        excerpt={p.data.excerpt}
-        kind="poem"
-        year={p.data.year}
-        byline={true}
-        href={withBase(`/poems/${p.id}/`)}
-        illustration={p.data.illustration}
-      />
-    ))}
+    {FAMILIES.map((fam) => {
+      const group = poems
+        .filter((p) => p.data.family === fam.key)
+        .sort((a, b) => a.data.order - b.data.order);
+      return (
+        group.length > 0 && (
+          <div class="poem-family">
+            <div class="poem-family-label">{fam.label}</div>
+            {group.map((p) => (
+              <PieceEntry
+                title={p.data.title}
+                sub={p.data.sub}
+                excerpt={p.data.excerpt}
+                kind="poem"
+                year={p.data.year}
+                byline={true}
+                href={withBase(`/poems/${p.id}/`)}
+                illustration={p.data.illustration}
+              />
+            ))}
+          </div>
+        )
+      );
+    })}
   </section>
 </Base>

@@ -95,6 +95,7 @@ Body = the poem as written. Parsing rules (custom loader, unit-tested):
 - All characters verbatim — curly quotes, em-dashes, "jumped(all of us," quirks. Files are UTF-8; no smart-quote transformation is applied.
 - Detail page ends with `— tachi` em line + tailpiece spot (72px, centered, 3.2rem above), per prototype.
 - (2026-07-24:) each verse line renders as a block with a **1.5em hanging indent** — overflow continuations indent, so flush-left always means an authored line start and stanza shape survives narrow screens. Inert when nothing wraps.
+- (2026-07-24:) poems carry a `family` field — `telling` (long narrative praise-songs) or `breath` (short lyrics, the default). The index groups them under accent labels "the long tellings" / "the short breaths" (the about page's group pattern); `order` sorts ascending *within* a family, numbered with gaps of ten for easy insertion.
 
 ### Writings (`content/writings/<slug>/index.md`)
 

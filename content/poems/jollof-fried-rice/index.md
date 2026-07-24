@@ -4,7 +4,8 @@ sub: "(a story for my brothers, Evan, Jonathan, Joel, Joshua)"
 excerpt: "Come, sit. The floor is cool. Concrete keeps its secrets from the sun, and a boy who lies belly-down on bare cement…"
 illustration: "moon-crescent"
 year: 2026
-order: 1
+family: "telling"
+order: 20
 ---
 Come, sit. The floor is cool.
 Concrete keeps its secrets from the sun,

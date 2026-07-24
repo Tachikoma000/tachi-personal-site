@@ -3,7 +3,8 @@ title: "her hands"
 excerpt: "my mother's hands have carried firewood, fevers, three jobs, five boys and one ocean…"
 illustration: "gloves"
 year: 2026
-order: 10
+family: "breath"
+order: 50
 ---
 my mother's hands have carried
 firewood, fevers, three jobs,

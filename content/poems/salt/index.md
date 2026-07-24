@@ -3,7 +3,8 @@ title: "salt"
 excerpt: "every load i have ever carried has weighed less at the shoreline…"
 illustration: "wave-fluid"
 year: 2026
-order: 9
+family: "breath"
+order: 40
 ---
 every load i have ever carried
 has weighed less at the shoreline.

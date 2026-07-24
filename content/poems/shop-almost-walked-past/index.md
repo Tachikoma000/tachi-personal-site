@@ -4,7 +4,8 @@ sub: "(Okinawa)"
 excerpt: "they say the best soup hides behind the humblest door. the outside said keep walking…"
 illustration: "bubbles"
 year: 2026
-order: 6
+family: "breath"
+order: 10
 ---
 they say the best soup hides
 behind the humblest door.

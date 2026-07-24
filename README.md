@@ -18,7 +18,8 @@ Live: https://tachi.ink
    excerpt: first breath of the poem, shown on the index page…
    illustration: moon-crescent      # any name from public/illustrations/
    year: 2026
-   order: 6                         # position on the index page
+   family: breath                   # poems only: "telling" (long) or "breath" (short); default breath
+   order: 90                        # position within its family, ascending; leave gaps of 10
    ---
    The poem itself, written exactly as a poem.
    Each line is a line.

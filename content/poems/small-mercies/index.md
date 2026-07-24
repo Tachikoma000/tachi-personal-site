@@ -3,7 +3,8 @@ title: "small mercies, a count"
 excerpt: "the first sip of water in the night. the parking spot by the door…"
 illustration: "radio-waves"
 year: 2026
-order: 13
+family: "breath"
+order: 80
 ---
 the first sip of water in the night.
 the parking spot by the door.

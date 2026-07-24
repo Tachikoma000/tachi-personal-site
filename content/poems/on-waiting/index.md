@@ -3,7 +3,8 @@ title: "on waiting"
 excerpt: "the dough must rest. the kiln must cool. the experiment runs overnight…"
 illustration: "sun-rays"
 year: 2026
-order: 12
+family: "breath"
+order: 70
 ---
 the dough must rest. the kiln must cool.
 the experiment runs overnight.

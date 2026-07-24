@@ -4,7 +4,8 @@ sub: "(for daddy)"
 excerpt: "they say the drum does not know the name of the hand that beats it. but the son knows. the son always knows…"
 illustration: "arch-geometric"
 year: 2026
-order: 4
+family: "telling"
+order: 40
 ---
 They say the drum does not know
 the name of the hand that beats it.

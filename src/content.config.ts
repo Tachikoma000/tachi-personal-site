@@ -26,7 +26,10 @@ const dirSlug = (suffix: string) => ({ entry }: { entry: string }) => entry.repl
 
 const poems = defineCollection({
   loader: glob({ pattern: '*/index.md', base: './content/poems', generateId: dirSlug('/index.md') }),
-  schema: pieceSchema,
+  schema: pieceSchema.extend({
+    // "the long tellings" (narrative praise-songs) vs "the short breaths" (lyrics)
+    family: z.enum(['telling', 'breath']).default('breath'),
+  }),
 });
 
 const poemNotes = defineCollection({

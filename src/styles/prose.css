@@ -162,3 +162,8 @@ body[data-hour="night"] .hour-mark [data-mark="night"] { display: block; }
 .about .work-sub { font-style: italic; color: var(--ink-soft); font-size: 0.9rem; margin-top: 0.15rem; }
 .about .work-links { margin-top: 0.6rem; }
 .not-found { text-align: center; padding-top: 18vh; }
+/* poem families (2026-07-24): the index groups "the long tellings" and
+   "the short breaths" under quiet accent labels — the about page's pattern. */
+.poem-family { margin-top: 2.6rem; }
+.poem-family:first-of-type { margin-top: 0; }
+.poem-family-label { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-poemtitle); text-transform: lowercase; color: var(--accent); margin-bottom: 0.4rem; transition: color var(--transition-sky); }

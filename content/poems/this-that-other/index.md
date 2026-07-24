@@ -4,7 +4,8 @@ sub: "an ode to friendship and the human experience"
 excerpt: "we did not come because it was easy (we came with more questions than luggage, each of us carrying our separate weathers…)"
 illustration: "hand-heart"
 year: 2026
-order: 2
+family: "telling"
+order: 10
 ---
 we did not come because it was easy
 (we came with more questions
