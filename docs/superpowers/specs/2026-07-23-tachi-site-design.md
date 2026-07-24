@@ -17,7 +17,7 @@ Turn the high-fidelity design handoff into a production site: pixel-faithful to 
 | Structured data | Small YAML files for link lists (books, selected works) |
 | Hosting | GitHub Pages via GitHub Actions |
 | Repo | `Tachikoma000/tachi-personal-site`, public (required for free-plan Pages) |
-| Domain | `tachikoma000.github.io/tachi-personal-site/` now; custom domain later (two-line config change + DNS) |
+| Domain | **tachi.ink** (live 2026-07-24: A records + www CNAME at name.com → GitHub Pages; HTTPS enforced; old github.io URL 301s here) |
 | Fonts | Self-hosted via Fontsource (`@fontsource/*`): Cormorant Garamond, EB Garamond, Zen Kaku Gothic New — same weights/styles as `tokens/fonts.css`. Zero third-party requests site-wide |
 | Extras | RSS feed + sitemap. No analytics, no trackers, ever (handoff mandate) |
 
