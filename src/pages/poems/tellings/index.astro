@@ -1,0 +1,10 @@
+---
+import Base from '../../../layouts/Base.astro';
+import FamilyIndex from '../../../components/FamilyIndex.astro';
+import { familyOf } from '../../../lib/families';
+
+const fam = familyOf('telling');
+---
+<Base title={`${fam.name} — tachi`} description={`${fam.description} — poems by tachi`}>
+  <FamilyIndex familyKey="telling" />
+</Base>

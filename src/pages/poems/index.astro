@@ -3,42 +3,46 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import TopBar from '../../components/TopBar.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
-import PieceEntry from '../../components/PieceEntry.astro';
+import PoemRow from '../../components/PoemRow.astro';
+import { FAMILIES } from '../../lib/families';
+import { numberToWords } from '../../lib/numberToWords';
 import { withBase } from '../../lib/url';
 
 const poems = await getCollection('poems');
-const FAMILIES = [
-  { key: 'telling', label: 'the long tellings' },
-  { key: 'breath', label: 'the short breaths' },
-] as const;
+const groups = FAMILIES.map((fam) => {
+  const all = poems
+    .filter((p) => p.data.family === fam.key)
+    .sort((a, b) => a.data.order - b.data.order);
+  return { fam, all, shown: all.slice(0, 3), remainder: Math.max(0, all.length - 3) };
+});
 ---
-<Base title="poems — tachi" description="the shorter breaths — poems by tachi">
+<Base title="poems — tachi" description="praise-songs & lyrics — poems by tachi">
   <section class="view">
     <TopBar active="poems" />
-    <SectionHeading title="Poems" note="the shorter breaths" />
-    {FAMILIES.map((fam) => {
-      const group = poems
-        .filter((p) => p.data.family === fam.key)
-        .sort((a, b) => a.data.order - b.data.order);
-      return (
-        group.length > 0 && (
-          <div class="poem-family">
-            <div class="poem-family-label">{fam.label}</div>
-            {group.map((p) => (
-              <PieceEntry
-                title={p.data.title}
-                sub={p.data.sub}
-                excerpt={p.data.excerpt}
-                kind="poem"
-                year={p.data.year}
-                byline={true}
-                href={withBase(`/poems/${p.id}/`)}
-                illustration={p.data.illustration}
-              />
-            ))}
+    <SectionHeading title="Poems" note="praise-songs & lyrics" />
+    {groups.map(({ fam, all, shown, remainder }) => (
+      <div class="poem-family">
+        <a
+          class="family-head"
+          href={withBase(`/poems/${fam.slug}/`)}
+          aria-label={`${fam.name} — all ${numberToWords(all.length)}`}
+        >
+          <span class="fnames">
+            <span class="fname">{fam.name}</span>
+            <span class="fdesc">{fam.description}</span>
+          </span>
+          <span class="fdots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </a>
+        {shown.map((p) => <PoemRow poem={p} showSub={fam.key === 'telling'} />)}
+        {remainder > 0 && (
+          <div class="family-more">
+            <a href={withBase(`/poems/${fam.slug}/`)}>
+              {numberToWords(remainder)} more {remainder === 1 ? fam.moreNoun : `${fam.moreNoun}s`}
+              {' '}<span class="arr">→</span>
+            </a>
           </div>
-        )
-      );
-    })}
+        )}
+      </div>
+    ))}
   </section>
 </Base>

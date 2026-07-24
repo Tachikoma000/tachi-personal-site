@@ -45,7 +45,9 @@ function expectEqual(where, actual, expected) {
 
 // ——— poems ———
 const poems = extractArray('PoemsScreen.ref.jsx', 'POEMS');
-const poemsIndex = page('poems/index.html');
+// The five handoff poems are all "tellings"; their full entries (with excerpts)
+// live on the tellings family page now, not the poems overview.
+const tellingsIndex = page('poems/tellings/index.html');
 for (const p of poems) {
   const $ = page(`poems/${p.id}/index.html`);
   expectEqual(`poem ${p.id}: title`, $('.section-title').first().text(), p.title);
@@ -58,8 +60,8 @@ for (const p of poems) {
     expectEqual(`poem ${p.id}: author note`, actualNote, expectedNote);
   }
   expectEqual(
-    `poems index: excerpt for ${p.id}`,
-    poemsIndex(`a[href$="/poems/${p.id}/"] .piece-excerpt`).text(),
+    `tellings index: excerpt for ${p.id}`,
+    tellingsIndex(`a[href$="/poems/${p.id}/"] .piece-excerpt`).text(),
     p.excerpt,
   );
 }

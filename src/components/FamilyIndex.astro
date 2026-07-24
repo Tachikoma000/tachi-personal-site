@@ -1,0 +1,36 @@
+---
+// Full index of one poem family (design 4g §4): family name as heading,
+// description as note, full entries (excerpts kept), newest first, with a
+// "← poems" back link. Reached from the overview's header, dots, and more-link.
+import { getCollection } from 'astro:content';
+import TopBar from './TopBar.astro';
+import SectionHeading from './SectionHeading.astro';
+import PieceEntry from './PieceEntry.astro';
+import { familyOf } from '../lib/families';
+import { withBase } from '../lib/url';
+
+interface Props {
+  familyKey: 'breath' | 'telling';
+}
+const fam = familyOf(Astro.props.familyKey);
+const poems = (await getCollection('poems'))
+  .filter((p) => p.data.family === fam.key)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+<section class="view">
+  <TopBar active="poems" />
+  <a class="back-link" href={withBase('/poems/')}>← poems</a>
+  <SectionHeading title={fam.name} note={fam.description} />
+  {poems.map((p) => (
+    <PieceEntry
+      title={p.data.title}
+      sub={p.data.sub}
+      excerpt={p.data.excerpt}
+      kind="poem"
+      year={p.data.year}
+      byline={true}
+      href={withBase(`/poems/${p.id}/`)}
+      illustration={p.data.illustration}
+    />
+  ))}
+</section>

@@ -5,6 +5,7 @@ import TopBar from '../../components/TopBar.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import AuthorNote from '../../components/AuthorNote.astro';
 import PoemBody from '../../components/PoemBody.astro';
+import { familyOf } from '../../lib/families';
 import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
@@ -12,13 +13,14 @@ export async function getStaticPaths() {
   return poems.map((poem) => ({ params: { slug: poem.id }, props: { poem } }));
 }
 const { poem } = Astro.props;
+const family = familyOf(poem.data.family);
 const note = await getEntry('poemNotes', poem.id);
 const NoteContent = note ? (await render(note)).Content : null;
 ---
 <Base title={`${poem.data.title} — tachi`} description={poem.data.excerpt} ogType="article">
   <section class="view">
     <TopBar active="poems" />
-    <a class="back-link" href={withBase('/poems/')}>← the shorter breaths</a>
+    <a class="back-link" href={withBase(`/poems/${family.slug}/`)}>← {family.name}</a>
     <SectionHeading title={poem.data.title} note={poem.data.sub} />
     {NoteContent && (
       <AuthorNote label="a note from the author" labelClause=", before the poem" skipLabel="to the poem" bridgeLabel="the poem" target="the-poem">
