@@ -1,0 +1,81 @@
+---
+// Hour control as a hand-drawn ink mark (owner-approved 2026-07-24, amending
+// the handoff's "no icons" rule for this one control): six stroke marks in the
+// illustration language — sun phases, first star, crescent. Which mark shows
+// is pure CSS keyed to body[data-hour], so the right one renders on first
+// paint; the script only cycles the hour and keeps the accessible name.
+// The hour's NAME stays available to everyone via title + aria-label.
+---
+<button class="hour-mark" aria-live="polite" aria-label="light of the hour: midday — tap for the next" title="midday">
+  <span data-mark="dawn" aria-hidden="true">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 16.6 C 8.5 16.2 15.5 16.2 20 16.6" />
+      <path d="M8.2 16.4 A 3.9 3.9 0 0 1 15.8 16.4" />
+      <path d="M12 9.2 V 7" />
+      <path d="M7.6 10.8 L 6.2 9.5" />
+      <path d="M16.4 10.8 L 17.8 9.5" />
+    </svg>
+  </span>
+  <span data-mark="morning" aria-hidden="true">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 18.8 C 9 18.5 15 18.5 20 18.8" />
+      <path d="M12 7.5 a 3.1 3.1 0 1 0 0.02 0 z" />
+      <path d="M12 4.7 V 3" />
+      <path d="M16.6 6.4 L 17.8 5.2" />
+    </svg>
+  </span>
+  <span data-mark="midday" aria-hidden="true">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 8.6 a 3.4 3.4 0 1 0 0.02 0 z" />
+      <path d="M12 5.3 V 3.4" />
+      <path d="M5.7 12 H 3.8" />
+      <path d="M18.3 12 H 20.2" />
+      <path d="M7.4 7.4 L 6 6.1" />
+      <path d="M16.6 7.4 L 18 6.1" />
+    </svg>
+  </span>
+  <span data-mark="dusk" aria-hidden="true">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 14.8 C 8.5 14.4 15.5 14.4 20 14.8" />
+      <path d="M8.8 14.6 A 3.4 3.4 0 0 1 15.2 14.6" />
+      <path d="M6 12.4 L 4.6 12" />
+      <path d="M18 12.4 L 19.4 12" />
+    </svg>
+  </span>
+  <span data-mark="bleue" aria-hidden="true">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 18.4 C 9 18.1 15 18.1 20 18.4" />
+      <path d="M12 5.4 L 13.1 7.5 L 15.2 8.6 L 13.1 9.7 L 12 11.8 L 10.9 9.7 L 8.8 8.6 L 10.9 7.5 Z" />
+    </svg>
+  </span>
+  <span data-mark="night" aria-hidden="true">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.6 4.8 A 7.4 7.4 0 1 0 19.3 13.9 A 6 6 0 0 1 14.6 4.8 Z" />
+      <path d="M6.3 6.9 l 0.02 0.02" />
+      <path d="M8.6 4.3 l 0.02 0.02" />
+    </svg>
+  </span>
+</button>
+
+<script>
+  const ORDER: string[] = ['dawn', 'morning', 'midday', 'dusk', 'bleue', 'night'];
+  const NAME: Record<string, string> = { dawn: 'dawn', morning: 'morning', midday: 'midday', dusk: 'dusk', bleue: 'l’heure bleue', night: 'night' };
+
+  for (const mark of document.querySelectorAll<HTMLButtonElement>('.hour-mark')) {
+    const describe = () => {
+      const h = document.body.dataset.hour ?? 'midday';
+      mark.setAttribute('aria-label', `light of the hour: ${NAME[h] ?? h} — tap for the next`);
+      mark.title = NAME[h] ?? h;
+    };
+    mark.addEventListener('click', () => {
+      const current = document.body.dataset.hour ?? 'midday';
+      const next = ORDER[(ORDER.indexOf(current) + 1) % ORDER.length];
+      document.body.dataset.hour = next;
+      try {
+        sessionStorage.setItem('tachi-hour', next);
+      } catch {}
+      describe();
+    });
+    describe();
+  }
+</script>

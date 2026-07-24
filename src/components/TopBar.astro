@@ -1,6 +1,6 @@
 ---
 import Spot from './Spot.astro';
-import HourWord from './HourWord.astro';
+import HourMark from './HourMark.astro';
 import { withBase } from '../lib/url';
 
 interface Props {
@@ -15,15 +15,16 @@ const items = [
 ] as const;
 ---
 <div class="topbar">
-  <div class="topbar-left">
-    <a class="home-mark" aria-label="Return to arrival" href={withBase('/')}>
-      <Spot name="bird-creature" size={34} />
-    </a>
-    <HourWord />
+  <a class="home-link" href={withBase('/')}>
+    <span class="home-mark"><Spot name="bird-creature" size={34} /></span>
+    <span class="home-word">home</span>
+  </a>
+  <div class="topbar-right">
+    <nav class="topnav">
+      {items.map((it) => (
+        <a href={withBase(it.href)} class={active === it.id ? 'here' : undefined}>{it.label}</a>
+      ))}
+    </nav>
+    <HourMark />
   </div>
-  <nav class="topnav">
-    {items.map((it) => (
-      <a href={withBase(it.href)} class={active === it.id ? 'here' : undefined}>{it.label}</a>
-    ))}
-  </nav>
 </div>

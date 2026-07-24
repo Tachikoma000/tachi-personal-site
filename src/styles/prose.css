@@ -76,7 +76,7 @@ a.piece-link:hover { opacity: 1; padding-left: 0.8rem; }
 
 /* ————— production additions — values promoted from the handoff .ref.jsx inline styles ————— */
 .piece-meta strong { font-weight: 500; }
-a.home-mark { display: inline-block; }
+.home-mark { display: inline-block; }
 .back-link { display: inline-block; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; color: var(--ink-soft); margin-bottom: 2.2rem; }
 .author-note { margin-bottom: 2.8rem; padding-bottom: 2.4rem; border-bottom: 1px solid var(--hairline); }
 .author-note .note-label { font-family: var(--font-utility); font-weight: 400; font-size: 0.7rem; letter-spacing: var(--track-poemtitle); text-transform: lowercase; color: var(--accent); }
@@ -108,19 +108,34 @@ a.home-mark { display: inline-block; }
 }
 
 /* hour word (approved 2026-07-24, replaces the floating dial): the active
-   hour as a quiet word beside the home mark; tap cycles to the next hour. */
-.topbar-left { display: flex; align-items: center; gap: 1.1rem; }
-.hour-word { appearance: none; border: none; background: none; cursor: pointer; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; color: var(--ink-soft); padding: 0.25rem 0; transition: color var(--duration-hover); }
-.hour-word:hover { color: var(--ink); }
-.hour-word:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
-.hour-word .hw-short { display: none; }
+   hour after the nav links; tap cycles to the next hour. */
+.topbar-right { display: flex; align-items: center; gap: 1.6rem; }
+.home-link { display: flex; align-items: center; gap: 0.9rem; color: inherit; }
+.home-link:hover { opacity: 1; }
+.home-link:hover .home-mark { transform: rotate(-8deg); }
+.home-link:hover .home-word { color: var(--ink); border-bottom-color: var(--accent); }
+.home-word { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; color: var(--ink-soft); padding-bottom: 0.25rem; border-bottom: 1px solid transparent; transition: color var(--duration-hover), border-color var(--duration-hover); }
+.hour-mark { appearance: none; border: none; background: none; cursor: pointer; display: inline-flex; align-items: center; padding: 0.25rem 0 0.45rem; color: var(--ink-soft); transition: color var(--duration-hover); }
+.hour-mark:hover { color: var(--ink); }
+.hour-mark:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
+.hour-mark svg { display: block; }
+.hour-mark [data-mark] { display: none; }
+body[data-hour="dawn"] .hour-mark [data-mark="dawn"] { display: block; }
+body[data-hour="morning"] .hour-mark [data-mark="morning"] { display: block; }
+body[data-hour="midday"] .hour-mark [data-mark="midday"] { display: block; }
+body[data-hour="dusk"] .hour-mark [data-mark="dusk"] { display: block; }
+body[data-hour="bleue"] .hour-mark [data-mark="bleue"] { display: block; }
+body[data-hour="night"] .hour-mark [data-mark="night"] { display: block; }
 .arrival-hour { position: absolute; top: 2rem; right: 1.6rem; z-index: 5; }
 @media (max-width: 640px) {
-  .topbar-left { gap: 0.8rem; }
-  .hour-word { font-size: 0.62rem; letter-spacing: 0.18em; }
-  .hour-word .hw-full { display: none; }
-  .hour-word .hw-short { display: inline; }
+  .topbar-right { gap: 1.05rem; }
+  .home-link { gap: 0.6rem; }
+  .home-word { font-size: 0.62rem; letter-spacing: 0.18em; }
+  .hour-mark svg { width: 17px; height: 17px; }
   .arrival-hour { top: 1.4rem; right: 1.25rem; }
+}
+@media (max-width: 360px) {
+  .home-word { display: none; }
 }
 .stanza-gap { display: block; height: 1.6rem; }
 .essay p { margin-bottom: var(--ma-para); max-width: 58ch; }
