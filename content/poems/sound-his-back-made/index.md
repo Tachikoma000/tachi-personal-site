@@ -10,10 +10,8 @@ order: 30
 They say the drum does not know
 the name of the hand that beats it.
 But the son knows. The son always knows.
-And hear this, for it is the turning of the whole story.
 Now the hand knows too.
 
-Begin where every good story begins,
 in a house where rain announced itself
 loudly on the zinc roof,
 with a boy pressing his ear to his father's back,
@@ -62,10 +60,6 @@ and the word running with me the whole way,
 for no distance unsays a word.
 Hear me. No tower unsays a word.
 
-But listen now to how the story turns,
-for it has turned, and i was there,
-and i tell it as a witness tells it.
-
 The son found his voice, after twenty-three years.
 The mother, keeper of all the family's rooms,
 carried the matter gently to the father.
@@ -106,8 +100,7 @@ into hands that build and hearts that feel.
 Let the record of heaven show it plainly.
 The man did well.
 
-So here is what we did, my father and i,
-and let every son and every father hear it.
+So here is what we did, my father and i.
 
 He put down his guilt.
 I put down my word.

@@ -1,15 +1,12 @@
 ---
 title: "the shop you almost walked past"
 sub: "(Okinawa)"
-excerpt: "they say the best soup hides behind the humblest door. the outside said keep walking…"
+excerpt: "the outside said keep walking. the two stone lions by the door said otherwise, grinning like they knew something…"
 illustration: "bubbles"
 year: 2026
 family: "breath"
 order: 20
 ---
-they say the best soup hides
-behind the humblest door.
-
 the outside said keep walking.
 the two stone lions by the door said otherwise,
 grinning like they knew something.

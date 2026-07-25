@@ -1,13 +1,13 @@
 ---
 title: "what i did not say at your table"
-excerpt: "They say a guest should bring something to the house. I brought a degree, a company, a clean shave. I left the rest of myself in Lagos…"
+excerpt: "I brought a degree, a company, a clean shave. That is what a guest brings to a house. I left the rest of myself in Lagos…"
 illustration: "stick-figure"
 year: 2026
 family: "telling"
 order: 80
 ---
-They say a guest should bring something to the house.
 I brought a degree, a company, a clean shave.
+That is what a guest brings to a house.
 I left the rest of myself in Lagos
 where i keep it.
 

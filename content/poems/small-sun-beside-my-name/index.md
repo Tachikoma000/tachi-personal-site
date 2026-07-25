@@ -1,17 +1,12 @@
 ---
 title: "the small sun beside my name"
 sub: "(for mummy, a second telling)"
-excerpt: "They say a tailor who joins two cloths leaves a seam, so the joining can be undone. Whoever made my mother did not leave one…"
+excerpt: "I praised her once already and every word of it stands. This is the part that would not fit inside the praise…"
 illustration: "envelope-clover"
 year: 2026
 family: "telling"
 order: 50
 ---
-They say a tailor who joins two cloths
-leaves a seam, so the joining can be undone.
-Whoever made my mother
-did not leave one.
-
 I praised her once already
 and every word of it stands.
 This is the part that would not fit inside the praise.
@@ -90,7 +85,10 @@ I have been unkind about it exactly once.
 I heard my own voice doing it
 and did not care for the sound.
 
-I have looked for the seam.
+A tailor who joins two cloths leaves a seam,
+so the joining can be undone.
+Whoever made my mother did not leave one.
+I have looked for it.
 The hand that reaches past what it can carry
 is the hand that carried me miles through a fever
 when there was no car, no money, no one on the road.

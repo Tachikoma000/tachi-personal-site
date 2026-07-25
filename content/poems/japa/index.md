@@ -61,7 +61,6 @@ waiting for a stranger behind glass
 to decide the rest of their lives before lunch.
 
 And then Murtala Muhammed, the departure hall,
-which is the true national cathedral,
 where every family in Nigeria has knelt.
 Mothers at the barrier praying over sons
 with both hands raised and the whole terminal watching.

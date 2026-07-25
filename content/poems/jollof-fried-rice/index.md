@@ -120,7 +120,6 @@ which means i have holidays where i should have years.
 I know him the way you know a house
 you keep returning to and never live in.
 
-But here is what i have seen.
 He took a job at the restaurant where Joshua worked.
 Not for the money. For the shift.
 After school he drove them both there,

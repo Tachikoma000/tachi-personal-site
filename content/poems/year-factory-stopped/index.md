@@ -1,15 +1,12 @@
 ---
 title: "the year the factory stopped"
 sub: "(2022)"
-excerpt: "they say when death comes for a man he hears footsteps. mine came with wings…"
+excerpt: "An ordinary morning, an interview to prepare for, a man stepping out of his front door into a swarm of wasps…"
 illustration: "cross-faith"
 year: 2026
 family: "telling"
 order: 60
 ---
-They say when death comes for a man he hears footsteps.
-Mine came with wings.
-
 An ordinary morning, an interview to prepare for,
 a man stepping out of his front door
 into a swarm of wasps, as if the old stories
@@ -19,6 +16,9 @@ and the sun standing directly overhead
 when i returned to myself,
 a Texas heatwave pressing down like a hand,
 and a fire in my blood reading one hundred and five.
+
+They say death arrives on footsteps.
+Mine came with wings.
 
 Kaitlyn. Andrew.
 Friends who came running
