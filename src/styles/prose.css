@@ -44,7 +44,13 @@ a.piece-link:hover { opacity: 1; padding-left: 0.8rem; }
 .piece .piece-excerpt { margin-top: 1.1rem; font-size: var(--size-excerpt); color: var(--ink-soft); max-width: 56ch; transition: color var(--transition-sky); }
 .piece .piece-meta { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-meta); letter-spacing: var(--track-meta); color: var(--accent); margin-top: 1.1rem; transition: color var(--transition-sky); }
 
-.poem { font-family: var(--font-display); font-weight: 400; font-size: var(--size-poem); line-height: var(--leading-poem); margin: 1rem 0 0 var(--poem-indent); }
+/* Fluid poem type (2026-07-24): size tracks viewport width so authored lines
+   keep fitting the column as screens narrow — the poem's line structure is the
+   priority, not a fixed size. ~1.03rem at 390px, ~0.82rem floor on tiny
+   screens, capped at the original 1.5rem (--size-poem) so desktop is unchanged.
+   The hanging indent on .poem-line remains the safety net for the rare line
+   still too long to fit. */
+.poem { font-family: var(--font-display); font-weight: 400; font-size: clamp(0.82rem, calc(5vw - 3px), var(--size-poem)); line-height: var(--leading-poem); margin: 1rem 0 0 var(--poem-indent); }
 .poem em { font-weight: 300; }
 .poem-title { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-poemtitle); color: var(--accent); margin-bottom: 2rem; transition: color var(--transition-sky); }
 
