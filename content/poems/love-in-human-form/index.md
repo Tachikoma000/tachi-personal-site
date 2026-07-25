@@ -23,12 +23,9 @@ and in the middle of those gardens she planted us,
 five boys, watered daily with songs and discipline,
 and the whole street knew,
 whatever that family lacks,
-it is not love. Go and see.
+it is not love.
 The house with nothing was the house
 everyone came to sit in.
-Ask the neighbors which is worth more,
-paint or that woman's table.
-They will not need time to answer.
 
 On the days hunger came to test us,
 she did not let it find children weeping.
@@ -47,13 +44,11 @@ no car, no money, no helper on the road,
 she bent her back and took me onto it
 and walked. Miles, she walked,
 the red dust keeping count of her steps.
-Understand this and never forget it.
 A mother's back is the first ambulance.
 A mother's back is the oldest road in the world,
 and it has never once refused a child.
 
-Then the ocean, and America,
-and watch what the woman did.
+Then the ocean, and America.
 She cut her hair like a soldier entering service.
 She learned a new country by night school lamplight,
 three jobs, a dying caravan driven like a chariot,
@@ -74,13 +69,11 @@ she outsat him. Day and night, she outsat him.
 And torn between her God and her son,
 between the law of her faith
 and the blood hanging dark above my arm,
-she did not choose. Hear me, she refused to choose.
+she did not choose.
+She refused to choose.
 She took my hands and prayed us both into one boat,
 saying if there is punishment, let it fall on me.
 Take me. Not him. Not Onome. Not my own.
-Go and search every scripture, every proverb,
-every love song ever sung under any moon.
-You will not find a greater sentence.
 
 So if i ever love you well,
 friend, lover, listener, stranger,
