@@ -29,14 +29,14 @@ I turn the phone face down on the sheet.
 
 By afternoon another line arrives,
 no weight in it, no reproach,
-asking whether i received the first.
-She knows i received the first.
+asking whether I received the first.
+She knows I received the first.
 She has never once made me say the word no.
 
 I said it plainly to her one time, years ago.
-I told her why i left, what did not hold,
-what i could not make myself believe again.
-And she did a thing i still turn over in my hands.
+I told her why I left, what did not hold,
+what I could not make myself believe again.
+And she did a thing I still turn over in my hands.
 She agreed with me.
 She said she has seen the cracks herself,
 the rooms where the house does not stand true.
@@ -59,11 +59,11 @@ She tries every road to the same door.
 You will find peace there.
 You will be edified.
 You will meet a good woman among them.
-And i say i am travelling. I say the week is heavy.
+And I say I am travelling. I say the week is heavy.
 I say every word except the one,
 because no would land on her
 like something falling from a high shelf,
-and i have spent my life
+and I have spent my life
 catching things before they reach her.
 
 There is money in it too, if we are telling it whole.
@@ -75,7 +75,7 @@ arriving on my phone at six in the morning
 with a deadline already fastened to it.
 
 But consider what it is to stand before your own people
-and say, the food is mine, i will handle it,
+and say, the food is mine, I will handle it,
 when you once counted coins on a table in Lagos
 to make one cup of rice reach five boys.
 That was never catering.
@@ -95,7 +95,7 @@ when there was no car, no money, no one on the road.
 One hand. Two motions. Nowhere to cut.
 
 And there is a question underneath all of it
-i have never carried to her.
+I have never carried to her.
 Whether what binds us is love,
 or the shape that surviving together
 leaves in people afterward,
@@ -108,7 +108,7 @@ Next month the message will come
 with the small sun beside my name,
 and something will follow it,
 a date, a deposit, an invitation,
-and i will feel the old tightness climb my throat,
-and i will answer the part i can answer,
+and I will feel the old tightness climb my throat,
+and I will answer the part I can answer,
 and love her completely,
 and turn the phone face down on the sheet.

@@ -63,7 +63,7 @@ And down the corridor, the other church.
 
 The machine shop, the most dangerous room
 in that entire building
-and somehow the safest place i knew.
+and somehow the safest place I knew.
 The lathe. The mill. The grinders.
 The CNC with its patient violence,
 the printer laying down its slow ideas.
@@ -103,12 +103,12 @@ Inside jokes stacked five years deep.
 And we joked the way men joke
 in a room with a door and no supervisor.
 Nothing was sacred. Everything was material.
-I gave as good as i got.
-I was the one who said i would die first
+I gave as good as I got.
+I was the one who said I would die first
 in the horror movie, the way we always die,
 first reel, no name, no funeral,
-and they laughed, and i laughed,
-and the joke was mine, i had made it, i owned it,
+and they laughed, and I laughed,
+and the joke was mine, I had made it, I owned it,
 which is what a young man tells himself
 while he is paying to belong
 in small pieces of his own skin,
@@ -117,7 +117,7 @@ handed over cheerfully, one at a time.
 And they were kind, which is the part
 that makes the rest of this hard to carry.
 They read my face.
-They knew before i did when the doubt was climbing,
+They knew before I did when the doubt was climbing,
 when a young man was in over his head,
 and they would say the right small thing
 and send me back to my bench steadier.
@@ -134,7 +134,7 @@ the way temptation always does, casually.
 Come sit with us. Come laugh with us.
 You work too much. We know you love the physics,
 but come, sit.
-And i sat, and we laughed,
+And I sat, and we laughed,
 three men warmed by work and company,
 and the wound came dressed as laughter.
 
@@ -154,7 +154,7 @@ Not the mind. Not the hands.
 Not the systems the whole floor runs on.
 This.
 
-And this is why i could not name it for a night and a day.
+And this is why I could not name it for a night and a day.
 We had said everything to each other in that shop.
 I had made the same shape of joke myself,
 a hundred times, and been the one laughing loudest.
@@ -164,13 +164,13 @@ You cannot always tell from inside the room.
 
 I went home and asked my brother
 the question that shames me now to repeat.
-Am i being sensitive, or was that racism?
+Am I being sensitive, or was that racism?
 As if the knife should be consulted
 about the depth of the cut.
 
 And the next morning the veil was gone.
 I walked into that facility and counted,
-for the first time in my life i counted,
+for the first time in my life I counted,
 and the number came back one.
 One, in the entire building.
 Me.
@@ -181,7 +181,7 @@ walked in and sat down in confidence's seat,
 asking its patient poison questions.
 Was any of it real. The praise, the trust,
 the systems, the late nights, the belonging.
-Or was i furniture for a photograph,
+Or was I furniture for a photograph,
 a number for a form.
 
 There was another day, in the shop.
@@ -200,13 +200,13 @@ and offered to the room as comedy.
 I did not laugh.
 I know what that word is.
 I came here from somewhere else
-and i still know exactly what it is,
+and I still know exactly what it is,
 what it was built for, what it was used for,
 whose mouths carried it and over whose bodies.
 The ringing came back, the same ringing,
 the bell filling with its own sound.
 
-And i understood what the laughing was.
+And I understood what the laughing was.
 Not a joke that went too far.
 A hand set on a door
 to learn how far the door will open.
@@ -221,9 +221,9 @@ to the highest rooms of that company,
 and my mentor was already on his way.
 
 Two men heard it and did not laugh.
-That is why i am able to tell this
+That is why I am able to tell this
 as a story with an ending
-instead of a thing i carry alone.
+instead of a thing I carry alone.
 
 Then it moved without me.
 The chief walked down to the shop himself
@@ -231,14 +231,14 @@ and told them to go home, they would be contacted.
 A lawyer came. There were interviews.
 I answered the questions.
 
-And what i felt, i have never said aloud.
+And what I felt, I have never said aloud.
 Numb.
 Not vindicated. Not avenged. Numb,
 the way you watch weather
 happen to a house you live in.
 
 The investigation opened doors
-i had not known were doors.
+I had not known were doors.
 He had made a joke about gas chambers.
 There was a Jewish man in the room.
 After that, what he said to me
@@ -256,14 +256,14 @@ They had been carrying it for years.
 It took a lawyer in the building
 before it was safe to set down.
 
-So i was not the first. I was the last,
+So I was not the first. I was the last,
 the case that finally cracked the floor.
 Somewhere down that hallway a woman
-had been counting far longer than i had,
+had been counting far longer than I had,
 and no one had come running for her.
 
 I broke, eventually.
-I told my mentor i was starting to believe it,
+I told my mentor I was starting to believe it,
 that the word had found a foothold in me,
 and he looked at me with such sadness.
 And the house that had held my wounding
@@ -271,17 +271,17 @@ turned and paid for my mending.
 Therapy, offered plainly, no shame attached.
 Weeks off, anywhere in the country.
 I flew to sit near him for a few days
-until i could say the true word out loud.
+until I could say the true word out loud.
 Racism. Not sensitivity. The other thing.
 Not every house does this. Mine did.
 
-Then i came back, and the shop was empty.
+Then I came back, and the shop was empty.
 
 The lathe still there. The mill still there.
 The work still needing hands.
-So i did it myself. I set my own stock,
+So I did it myself. I set my own stock,
 held my own tolerances, ran my own finishes,
-and every single thing i knew how to do in that room
+and every single thing I knew how to do in that room
 had been taught to me
 by the men who were no longer allowed inside it.
 
@@ -289,9 +289,9 @@ I used their gift to fill their absence.
 There is no clean word for that.
 
 And guilt came, uninvited, and stayed a while.
-Should i have softened it in the interview.
-Should i have called it nothing.
-Should i have been angrier than i was.
+Should I have softened it in the interview.
+Should I have called it nothing.
+Should I have been angrier than I was.
 Two men lost their living,
 and one of them had been my friend.
 
@@ -310,7 +310,7 @@ Two nights later, somebody knocked at my door.
 
 It was my friend. He had driven to my house.
 I opened it and he put his arms around me
-and i put my arms around him,
+and I put my arms around him,
 and he apologized with his whole face,
 tears and all, saying he did not mean it,
 he did not mean it, he was sorry.
@@ -325,17 +325,17 @@ the gifts of my mind, could never be shaken.
 That was not true.
 They were shaken. Badly. For a long season.
 Other people had to help me set them back on the shelf,
-and i have never forgotten which people.
+and I have never forgotten which people.
 
 What remains is smaller than triumph
 and more durable.
-I still love that lab. When i think of those years
-i think first of the music, the traces, the mission,
+I still love that lab. When I think of those years
+I think first of the music, the traces, the mission,
 the three of us laughing at an impossible drawing.
 The other thing is a scar and behaves like one.
 Quiet. Present. Mine.
 
-But i notice everything now.
+But I notice everything now.
 A child who finds the thing
 he was not meant to find
 cannot give it back.

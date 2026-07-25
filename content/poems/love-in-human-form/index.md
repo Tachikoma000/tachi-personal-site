@@ -53,9 +53,9 @@ She cut her hair like a soldier entering service.
 She learned a new country by night school lamplight,
 three jobs, a dying caravan driven like a chariot,
 and still, still, the smile at the door for her sons.
-Only once did i see the full weight of it.
+Only once did I see the full weight of it.
 From a window in a trailer park in Texas,
-i watched her sit beneath a tree and weep
+I watched her sit beneath a tree and weep
 the tears she never billed us for,
 then wipe her face, gather her strength
 like a woman gathering firewood,
@@ -75,7 +75,7 @@ She took my hands and prayed us both into one boat,
 saying if there is punishment, let it fall on me.
 Take me. Not him. Not Onome. Not my own.
 
-So if i ever love you well,
+So if I ever love you well,
 friend, lover, listener, stranger,
 somebody's child,
 know that it is not my invention.

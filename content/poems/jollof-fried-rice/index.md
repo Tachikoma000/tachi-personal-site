@@ -1,5 +1,5 @@
 ---
-title: "If i get jollof and you get fried rice,"
+title: "If I get jollof and you get fried rice,"
 sub: "(a story for my brothers, Evan, Jonathan, Joel, Joshua)"
 excerpt: "Come, sit. The floor is cool. Concrete keeps its secrets from the sun, and a boy who lies belly-down on bare cement…"
 illustration: "moon-crescent"
@@ -36,7 +36,7 @@ We hid and we sought.
 Behind the water drum, inside the storehouse
 where old radios slept among the things
 nobody had the courage to throw away,
-and Evan and i would open their bodies with our small hands,
+and Evan and I would open their bodies with our small hands,
 priests of the screwdriver,
 asking every dead machine the same question.
 What made you sing?
@@ -49,7 +49,7 @@ What will you take when we get there?
 Jollof rice. No, fried rice.
 No, sausage roll and a bottle of Fanta, cold, with the mist on it.
 And then the treaty, solemn as anything signed by nations.
-If i get jollof and you get fried rice,
+If I get jollof and you get fried rice,
 we will share.
 Half of mine for half of yours.
 
@@ -73,9 +73,9 @@ The generator, the funnel, the slipped hand,
 the night the back of the house wore flames,
 and father shouting for water, for soap, for sand,
 ordinary things turned to weapons,
-and i, searching the smoke for my brother,
+and I, searching the smoke for my brother,
 crying out the words for the very first time,
-i love you, please come back.
+I love you, please come back.
 And Evan's voice returning like an answered prayer.
 He had run toward the street, toward help,
 already a healer before he knew the word for it.
@@ -115,8 +115,8 @@ Forgive us, brother, that we learned your worth slowly.
 You were the song in a house of engineers,
 and the song is what everyone remembers in the end.
 
-Joel was still small when i left for college,
-which means i have holidays where i should have years.
+Joel was still small when I left for college,
+which means I have holidays where I should have years.
 I know him the way you know a house
 you keep returning to and never live in.
 
@@ -131,7 +131,7 @@ paying what needs paying
 and letting the room believe it paid itself.
 He gives his turn away. He waits his turn.
 He has not opened yet.
-He will, and i intend to be in the room.
+He will, and I intend to be in the room.
 
 And Joshua, last born, who arrived
 already knowing who he was,
@@ -144,13 +144,13 @@ and you answer him in a steady voice
 while your own hands are still learning.
 I visited him once and he showed me his work,
 proud, wanting me to see all of it,
-and i recognised the face he was making.
-It is the face i make.
+and I recognised the face he was making.
+It is the face I make.
 
-Four brothers, and i hold four different amounts of them.
-Evan i have entire, from the fire onward.
-Jonathan i had to grow into.
-Joel and Joshua i have in photographs and phone calls
+Four brothers, and I hold four different amounts of them.
+Evan I have entire, from the fire onward.
+Jonathan I had to grow into.
+Joel and Joshua I have in photographs and phone calls
 and long weekends and the holidays,
 which is what the first son pays
 for being the first to leave.
@@ -171,7 +171,7 @@ under God's wide sky.
 Brothers, wherever this finds you.
 The treaty still holds.
 Oceans between us now, years between us now,
-and still, if i get jollof and you get fried rice,
+and still, if I get jollof and you get fried rice,
 half of mine is yours.
 It was always going to be yours.
 It will be yours until the last plate

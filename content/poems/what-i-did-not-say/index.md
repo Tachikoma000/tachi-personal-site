@@ -9,9 +9,9 @@ order: 80
 I brought a degree, a company, a clean shave.
 That is what a guest brings to a house.
 I left the rest of myself in Lagos
-where i keep it.
+where I keep it.
 
-I dressed for you the night i met your parents.
+I dressed for you the night I met your parents.
 Button-up. Clean cut. Perfume.
 Not to look handsome. To look expensive.
 To look educated, arriving, safe,
@@ -25,10 +25,10 @@ But the questions came at a certain angle,
 circling, gentle, curious,
 the questions of people working honestly
 at a difference they had not solved,
-and i answered every one of them well.
+and I answered every one of them well.
 I have always answered well.
 
-Here is what i did not say.
+Here is what I did not say.
 
 I did not say that we ran the streets
 guiding a bald rubber tire with a stick
@@ -40,7 +40,7 @@ I did not say that we walked home from school for miles
 eating smoked fish and stewed yam
 folded into newspaper, and that the ink
 of yesterday's headlines got into the oil,
-and that i have eaten in good restaurants since
+and that I have eaten in good restaurants since
 in three or four countries
 and remember none of them as clearly.
 
@@ -59,7 +59,7 @@ of our programme on AIT, on NTA,
 praying to reach the end of it
 before the dark came back for its property.
 
-I did not say that i walked to the filling station
+I did not say that I walked to the filling station
 for one hundred naira of petrol
 so the generator could hold the fans through the night,
 and that a boy carrying fuel home for his brothers
@@ -69,13 +69,13 @@ None of this is poverty when you are inside it.
 It only becomes poverty when you try to say it
 at a table with cloth napkins.
 
-So i did not say it.
+So I did not say it.
 I said Playgrounds. I said research. I said vision.
 I said the words that have passports.
 
-And behind that, the arithmetic i cannot stop.
+And behind that, the arithmetic I cannot stop.
 Is this a season for her, a door she is trying,
-and am i the door.
+and am I the door.
 Will they accept me, and if they smile and do not,
 will the not arrive later, quietly, in her ear.
 They gave me no evidence.
@@ -104,7 +104,7 @@ by rooms that never met me.
 
 The plates were cleared. Someone asked me
 about the company, about where it goes from here,
-and i set down my glass
+and I set down my glass
 and gave them the good answer,
 the practiced one,
 the one that has never once failed me.

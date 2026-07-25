@@ -51,7 +51,7 @@ again, again, until the word crawled beneath his skin
 and made a home there.
 Failure. In my own small voice.
 
-Father, i must tell you what that word built.
+Father, I must tell you what that word built.
 Towers. Degrees stacked like sandbags,
 research posts, companies, machines that think,
 a life spent running from one sentence,
@@ -72,8 +72,8 @@ troubled that a wound he could not remember making
 had lived so long in the body of his son.
 
 And in the morning he wrote to me,
-and i will carry his words to my grave
-the way i once carried his thunder in my ear.
+and I will carry his words to my grave
+the way I once carried his thunder in my ear.
 He wrote, you are the pride of my life.
 He wrote, please forgive me, Onome,
 and he translated my own name back to me
@@ -85,8 +85,8 @@ that no weapon fashioned against me shall prosper,
 speaking scripture the way our house always spoke it,
 as bread, as shield, as native tongue.
 
-And i answered him as a son answers,
-with the truest thing i know.
+And I answered him as a son answers,
+with the truest thing I know.
 Father, no one is perfect.
 We are all living life for the first time,
 you included.
@@ -100,7 +100,7 @@ into hands that build and hearts that feel.
 Let the record of heaven show it plainly.
 The man did well.
 
-So here is what we did, my father and i.
+So here is what we did, my father and I.
 
 He put down his guilt.
 I put down my word.

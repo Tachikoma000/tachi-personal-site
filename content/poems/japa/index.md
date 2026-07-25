@@ -121,10 +121,10 @@ by a place that will not see the interest.
 I count rooms now, in other people's countries,
 looking for a face like mine and rarely finding one,
 and it has never once occurred to me
-that i am also the reason
+that I am also the reason
 a room somewhere behind me is empty.
 
-I am the harvest of a farm i do not farm.
+I am the harvest of a farm I do not farm.
 
 Somewhere tonight the light will come back
 to a compound in Lagos,

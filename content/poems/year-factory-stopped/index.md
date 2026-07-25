@@ -13,7 +13,7 @@ into a swarm of wasps, as if the old stories
 had sent their smallest soldiers first.
 Then the fall, the head against the driveway,
 and the sun standing directly overhead
-when i returned to myself,
+when I returned to myself,
 a Texas heatwave pressing down like a hand,
 and a fire in my blood reading one hundred and five.
 
@@ -42,9 +42,9 @@ Red cells, white cells, platelets,
 all of them gone the way harmattan strips a tree,
 leaf by leaf, until the branches stand bare
 and no one can say which wind took the first one.
-No reason, they said, that i should be speaking.
+No reason, they said, that I should be speaking.
 
-And yet i was speaking.
+And yet I was speaking.
 
 (Why are you alive, the readings asked.
 Why are you alive, the doctors asked.
@@ -53,14 +53,14 @@ that a question can be a door.)
 
 They wheeled me toward the room of gas and sleep,
 and terror sat on my chest like a stone,
-and i, a man who had wandered far
+and I, a man who had wandered far
 from his father's house,
 whose prayers had gone quiet in his mouth
 through all the busy years,
 ran home the only way left to run.
-Father, it is me. I am sorry i turned away.
-Save me, and i am yours.
-Heal me, and i am your instrument.
+Father, it is me. I am sorry I turned away.
+Save me, and I am yours.
+Heal me, and I am your instrument.
 My story has only begun. My work is not finished.
 I vow it. I vow it.
 
@@ -72,7 +72,7 @@ torn between her God and her son,
 refusing to release my hand.
 What she prayed that night is written whole
 in her own praise-song, where it belongs,
-and i will not spend it twice.
+and I will not spend it twice.
 
 (Somewhere tonight a stranger's blood
 is still walking around inside me.
@@ -93,19 +93,19 @@ They closed a file on a question that cannot close.
 They never found what tried to kill me.
 I never found the edge of what saved me.
 
-So i live now as the answer
+So I live now as the answer
 to a question no one can properly ask.
 Alive on purpose. Alive like a vow
 walking around in shoes.
 
-Some seasons i believe i am keeping it.
-Some seasons i am certain i have fallen behind.
+Some seasons I believe I am keeping it.
+Some seasons I am certain I have fallen behind.
 There is no scale in this house
 that weighs a promise made under anesthesia,
 and enough is not a number
 anyone has ever shown me.
 
-So i have taken the stranger's method.
+So I have taken the stranger's method.
 Give what is in the hand. Do not sign it.
 Four bags came to me once from a person
 who never learned my name
@@ -115,9 +115,9 @@ I am still learning to follow it.
 
 And when the work grows heavy
 and the race feels long,
-i go back to the man on the gurney
+I go back to the man on the gurney
 still bargaining with heaven for one more chapter,
-and i sit with him a while.
+and I sit with him a while.
 I do not tell him whether it was enough.
 Neither of us will know that
 until the day the work is taken from our hands.
