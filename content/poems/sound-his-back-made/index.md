@@ -5,7 +5,7 @@ excerpt: "they say the drum does not know the name of the hand that beats it. bu
 illustration: "arch-geometric"
 year: 2026
 family: "telling"
-order: 40
+order: 30
 ---
 They say the drum does not know
 the name of the hand that beats it.

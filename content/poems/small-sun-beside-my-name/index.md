@@ -5,7 +5,7 @@ excerpt: "They say a tailor who joins two cloths leaves a seam, so the joining c
 illustration: "envelope-clover"
 year: 2026
 family: "telling"
-order: 15
+order: 50
 ---
 They say a tailor who joins two cloths
 leaves a seam, so the joining can be undone.

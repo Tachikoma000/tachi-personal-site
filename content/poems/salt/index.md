@@ -4,7 +4,7 @@ excerpt: "every load i have ever carried has weighed less at the shoreline…"
 illustration: "wave-fluid"
 year: 2026
 family: "breath"
-order: 40
+order: 60
 ---
 every load i have ever carried
 has weighed less at the shoreline.

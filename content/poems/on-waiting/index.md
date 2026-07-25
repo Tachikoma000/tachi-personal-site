@@ -4,7 +4,7 @@ excerpt: "the dough must rest. the kiln must cool. the experiment runs overnight
 illustration: "sun-rays"
 year: 2026
 family: "breath"
-order: 70
+order: 50
 ---
 the dough must rest. the kiln must cool.
 the experiment runs overnight.

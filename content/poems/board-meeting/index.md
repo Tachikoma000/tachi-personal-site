@@ -5,7 +5,7 @@ excerpt: "all week i instruct machines and the machines obey…"
 illustration: "animal-wildlife"
 year: 2026
 family: "breath"
-order: 60
+order: 30
 ---
 all week i instruct machines
 and the machines obey.

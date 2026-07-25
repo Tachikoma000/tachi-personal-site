@@ -4,7 +4,7 @@ excerpt: "They say a guest should bring something to the house. I brought a degr
 illustration: "stick-figure"
 year: 2026
 family: "telling"
-order: 18
+order: 80
 ---
 They say a guest should bring something to the house.
 I brought a degree, a company, a clean shave.

@@ -4,7 +4,7 @@ excerpt: "my mother's hands have carried firewood, fevers, three jobs, five boys
 illustration: "gloves"
 year: 2026
 family: "breath"
-order: 50
+order: 10
 ---
 my mother's hands have carried
 firewood, fevers, three jobs,
