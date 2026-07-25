@@ -20,10 +20,9 @@ when i returned to myself,
 a Texas heatwave pressing down like a hand,
 and a fire in my blood reading one hundred and five.
 
-Write their names in this story, for they earned it.
-Kaitlyn. Andrew. Friends who came running
+Kaitlyn. Andrew.
+Friends who came running
 before the asking had finished leaving my mouth.
-This is the first mercy. Mark it well.
 Some of us are alive today
 because somebody answered a text.
 
@@ -38,7 +37,6 @@ into before and after.
 Either our machines are wrong,
 or you have hours.
 
-Understand what had happened inside me.
 The factory in my bones had gone silent.
 Red cells, white cells, platelets,
 all of them gone the way harmattan strips a tree,
@@ -66,9 +64,6 @@ Heal me, and i am your instrument.
 My story has only begun. My work is not finished.
 I vow it. I vow it.
 
-A man does not forget a prayer like that.
-A debt like that does not expire.
-
 Then the night of blood.
 Four bags of a stranger's mercy
 hanging above me like dark fruit,
@@ -78,22 +73,22 @@ refusing to release my hand.
 What she prayed that night is written whole
 in her own praise-song, where it belongs,
 and i will not spend it twice.
-Know only that she offered heaven a trade
-no court in any world could refuse.
 
 (Somewhere tonight a stranger's blood
 is still walking around inside me.
 I never learned their name.
 I have become their thank you letter.)
 
-And days later, listen well,
-the fires in my bones were lit again.
-Slowly, the way green returns after harmattan,
-branch by branch, tree by tree,
-until the land forgets it was ever bare.
+And days later the factory started again.
+Nobody threw a switch. Nobody gave the order.
+The lines simply began to move
+the way a mill wakes in a town
+where every worker has gone home,
+and the doctors stood in the doorway of it
+with their clipboards and their reasons
+and had none.
 No diagnosis. No mechanism. No answer.
-The doctors closed a file
-on a question that cannot close.
+They closed a file on a question that cannot close.
 
 They never found what tried to kill me.
 I never found the edge of what saved me.
@@ -102,11 +97,27 @@ So i live now as the answer
 to a question no one can properly ask.
 Alive on purpose. Alive like a vow
 walking around in shoes.
+
+Some seasons i believe i am keeping it.
+Some seasons i am certain i have fallen behind.
+There is no scale in this house
+that weighs a promise made under anesthesia,
+and enough is not a number
+anyone has ever shown me.
+
+So i have taken the stranger's method.
+Give what is in the hand. Do not sign it.
+Four bags came to me once from a person
+who never learned my name
+and never returned to be thanked.
+That is the whole instruction.
+I am still learning to follow it.
+
 And when the work grows heavy
 and the race feels long,
-i return to the man on the gurney
-begging heaven for one more chapter,
-and i tell him,
-
-we got it. We got the chapter.
-Now write it well.
+i go back to the man on the gurney
+still bargaining with heaven for one more chapter,
+and i sit with him a while.
+I do not tell him whether it was enough.
+Neither of us will know that
+until the day the work is taken from our hands.

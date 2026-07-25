@@ -45,6 +45,13 @@ function expectEqual(where, actual, expected) {
 
 // ——— poems ———
 const poems = extractArray('PoemsScreen.ref.jsx', 'POEMS');
+// Poems the author has deliberately rewritten since the handoff. Their bodies
+// are no longer expected to match the handoff arrays — the living poem wins.
+// Everything else about them (title, sub, excerpt, note) is still guarded, and
+// every poem not listed here is still checked word for word.
+const REVISED_SINCE_HANDOFF = new Map([
+  ['year-factory-stopped', 'rewritten 2026-07-25: mill-waking restart + new closing movement'],
+]);
 // The five handoff poems are all "tellings"; their full entries (with excerpts)
 // live on the tellings family page now, not the poems overview.
 const tellingsIndex = page('poems/tellings/index.html');
@@ -52,8 +59,12 @@ for (const p of poems) {
   const $ = page(`poems/${p.id}/index.html`);
   expectEqual(`poem ${p.id}: title`, $('.section-title').first().text(), p.title);
   if (p.sub) expectEqual(`poem ${p.id}: sub`, $('.section-note').first().text(), p.sub);
-  const expectedPoem = p.stanzas.map((lines) => lines.join(' ')).join(' ') + ' — tachi';
-  expectEqual(`poem ${p.id}: body`, $('.poem').first().text(), expectedPoem);
+  if (REVISED_SINCE_HANDOFF.has(p.id)) {
+    console.log(`~ poem ${p.id}: body — author revision, not compared (${REVISED_SINCE_HANDOFF.get(p.id)})`);
+  } else {
+    const expectedPoem = p.stanzas.map((lines) => lines.join(' ')).join(' ') + ' — tachi';
+    expectEqual(`poem ${p.id}: body`, $('.poem').first().text(), expectedPoem);
+  }
   if (p.note) {
     const expectedNote = p.note.join(' ') + ' With love and gratitude, Tachi';
     const actualNote = $('.author-note p').map((_, el) => $(el).text()).get().join(' ');
@@ -104,4 +115,7 @@ if (failures > 0) {
   console.error(`\n${failures} fidelity failure(s)`);
   process.exit(1);
 }
-console.log('\nAll fidelity checks passed — every word matches the handoff.');
+const revisedNote = REVISED_SINCE_HANDOFF.size
+  ? ` (${REVISED_SINCE_HANDOFF.size} author revision${REVISED_SINCE_HANDOFF.size > 1 ? 's' : ''} skipped, listed above)`
+  : '';
+console.log(`\nAll fidelity checks passed — every compared word matches the handoff${revisedNote}.`);
