@@ -18,7 +18,3 @@ in a different accent.
 you do your part.
 you close the door.
 you let the warmth finish.
-
-impatience has never once
-baked the bread faster.
-i have run the trials personally.
