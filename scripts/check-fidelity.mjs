@@ -51,6 +51,7 @@ const poems = extractArray('PoemsScreen.ref.jsx', 'POEMS');
 // every poem not listed here is still checked word for word.
 const REVISED_SINCE_HANDOFF = new Map([
   ['year-factory-stopped', 'rewritten 2026-07-25: mill-waking restart + new closing movement'],
+  ['jollof-fried-rice', 'rewritten 2026-07-25: a full movement for each brother'],
 ]);
 // The five handoff poems are all "tellings"; their full entries (with excerpts)
 // live on the tellings family page now, not the poems overview.

@@ -52,8 +52,6 @@ And then the treaty, solemn as anything signed by nations.
 If i get jollof and you get fried rice,
 we will share.
 Half of mine for half of yours.
-This is how brothers first learn economics.
-This is how brothers first learn communion.
 
 At night, when NEPA took the light,
 as NEPA always took the light,
@@ -81,28 +79,82 @@ i love you, please come back.
 And Evan's voice returning like an answered prayer.
 He had run toward the street, toward help,
 already a healer before he knew the word for it.
-Understand this. Even our disasters
-taught us how to love.
 
 Evan, who drew the chambers of the heart as a child
 and now mends them as a man.
+
 Jonathan, who arrived speaking a language
 none of us could enter,
-who carried more color in his skin and his spirit
-than our technical house knew how to praise,
-and forgive us, brother, that we learned your worth slowly,
-you were the song in a family of engineers,
+grammar and rhythm of his own invention,
+a whole country built inside one small mouth.
+We were a house of engineers.
+We did not know what to do with a boy
+who was already a nation.
+
+Then the high school years, and the band,
+and a door down the hallway closed
+with the same eight bars behind it,
+wrong, and wrong, and wrong again,
+and then one evening, right.
+He was not practising.
+He was spelling out his name
+in the only alphabet that ever fit him.
+
+We asked him to study science,
+the way families ask, meaning it kindly.
+He tried. Computer science. One semester,
+which was long enough to be certain.
+And then he came into his true shape,
+paintings, comic strips for the paper,
+his own work on his own walls.
+I went to one of his exhibits
+and stood in that room and understood
+that what physics is to me, art is to him.
+The same fire. The same hunger. The same music.
+Forgive us, brother, that we learned your worth slowly.
+You were the song in a house of engineers,
 and the song is what everyone remembers in the end.
-Joel, who came as the beloved baby
-and grew into a deep quiet river,
-watching everything, wasting no words,
-banking his wisdom like treasure.
-And Joshua, the last, the gathering of all of us,
+
+Joel was still small when i left for college,
+which means i have holidays where i should have years.
+I know him the way you know a house
+you keep returning to and never live in.
+
+But here is what i have seen.
+He took a job at the restaurant where Joshua worked.
+Not for the money. For the shift.
+After school he drove them both there,
+and after closing he drove them both home,
+a boy quietly arranging his own life
+so his brother would never work a night alone.
+He carries our mother's oldest habit,
+paying what needs paying
+and letting the room believe it paid itself.
+He gives his turn away. He waits his turn.
+He has not opened yet.
+He will, and i intend to be in the room.
+
+And Joshua, last born, who arrived
+already knowing who he was,
 builder's hands, artist's eye, athlete's stride,
-charm enough to soften any room,
-proof that our parents saved
-a full measure of every gift
-for the final child.
+charm enough to warm a room before he enters it.
+The strange office of the eldest
+is that the youngest telephones you
+to ask what it means to be a man,
+and you answer him in a steady voice
+while your own hands are still learning.
+I visited him once and he showed me his work,
+proud, wanting me to see all of it,
+and i recognised the face he was making.
+It is the face i make.
+
+Four brothers, and i hold four different amounts of them.
+Evan i have entire, from the fire onward.
+Jonathan i had to grow into.
+Joel and Joshua i have in photographs and phone calls
+and long weekends and the holidays,
+which is what the first son pays
+for being the first to leave.
 
 We were boys who did not know what the world was,
 or what it would ask of us,
@@ -117,7 +169,7 @@ that we were covered,
 under mother's wing, under father's roof,
 under God's wide sky.
 
-Brothers, hear me, wherever this finds you.
+Brothers, wherever this finds you.
 The treaty still holds.
 Oceans between us now, years between us now,
 and still, if i get jollof and you get fried rice,
