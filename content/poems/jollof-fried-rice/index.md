@@ -6,6 +6,10 @@ illustration: "moon-crescent"
 year: 2026
 family: "telling"
 order: 20
+# Tellings use capital I; breaths use lowercase i. ONE DELIBERATE EXCEPTION
+# in this poem: the boy's cry through the smoke — "i love you, please come
+# back." — stays lowercase. The line's power is in its smallness. Do not
+# normalize it. (Author's decision, 2026-07-25.)
 ---
 Come, sit. The floor is cool.
 Concrete keeps its secrets from the sun,
@@ -75,7 +79,7 @@ and father shouting for water, for soap, for sand,
 ordinary things turned to weapons,
 and I, searching the smoke for my brother,
 crying out the words for the very first time,
-I love you, please come back.
+i love you, please come back.
 And Evan's voice returning like an answered prayer.
 He had run toward the street, toward help,
 already a healer before he knew the word for it.
