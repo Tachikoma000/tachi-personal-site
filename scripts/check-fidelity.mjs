@@ -53,6 +53,7 @@ const REVISED_SINCE_HANDOFF = new Map([
   ['year-factory-stopped', 'rewritten 2026-07-25: mill-waking restart + new closing movement'],
   ['jollof-fried-rice', 'rewritten 2026-07-25: a full movement for each brother'],
   ['love-in-human-form', 'revised 2026-07-25: exhortative asides trimmed'],
+  ['this-that-other', 'revised 2026-07-25: four subtractions, no additions'],
 ]);
 // The five handoff poems are all "tellings"; their full entries (with excerpts)
 // live on the tellings family page now, not the poems overview.

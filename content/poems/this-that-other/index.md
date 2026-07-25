@@ -24,15 +24,13 @@ from the inside
 and so we jumped(all of us,
 strangers from everywhere,
 hearts held out like open hands)
-into the unknown
 
 the mountain did not ask our names
 it only said, climb.
 the ocean did not ask our stories
 it only said, come.
 
-and we did the uncomfortable things.
-climbed what scared us,
+and we climbed what scared us,
 paddled into what humbled us,
 said the true and trembling things out loud,
 and somewhere in all that
@@ -72,7 +70,6 @@ are one
 
 and though we scatter now
 to our separate corners of the earth,
-hear me.
 
 we shall meet again,
 in every story told,
@@ -89,8 +86,7 @@ you who jumped, you who opened)
 go louder than your doubt,
 go wider than your fear,
 carry this,
-this joy, that laughter, the other thing
-too big for words,
+this joy, that laughter, the other thing,
 carry it like a torch
 into every room you enter
 
