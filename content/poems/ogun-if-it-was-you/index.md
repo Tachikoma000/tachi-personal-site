@@ -5,6 +5,7 @@ illustration: "sai-ninja"
 year: 2026
 family: "telling"
 order: 80
+hour: "bleue"
 ---
 Iron.
 The mouth closes on the word like a vice.

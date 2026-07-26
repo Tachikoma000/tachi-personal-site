@@ -5,6 +5,7 @@ illustration: "sunrise-waves"
 year: 2026
 family: "breath"
 order: 40
+hour: "dawn"
 ---
 an island with no engines,
 only donkeys keeping the old pace,

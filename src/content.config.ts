@@ -33,9 +33,13 @@ const poems = defineCollection({
     // multiple lines; epigraphSource renders as the attribution beneath.
     epigraph: z.string().optional(),
     epigraphSource: z.string().optional(),
-    // Two lines shown when this poem is hung on its family page wall (6c).
-    // Optional: falls back to the poem's first two lines. Use a block scalar (|).
+    // Two lines shown when this poem is hung on its family page wall (6c), and
+    // the pool the arrival page's turning epigraph draws from (5i). Optional:
+    // falls back to the poem's first two lines. Use a block scalar (|).
     couplet: z.string().optional(),
+    // The light this poem opens in (E). Suggested only — a visitor who has
+    // chosen an hour with the hour mark always keeps it. Omit for most poems.
+    hour: z.enum(['dawn', 'morning', 'midday', 'dusk', 'bleue', 'night']).optional(),
   }),
 });
 

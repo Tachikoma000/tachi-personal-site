@@ -20,8 +20,10 @@ interface Props {
   ogType?: 'website' | 'article';
   ogTitle?: string; // share-card override; defaults to title
   ogDescription?: string; // share-card override; defaults to description
+  /** The light this page opens in (E). A visitor's own choice still wins. */
+  hour?: 'dawn' | 'morning' | 'midday' | 'dusk' | 'bleue' | 'night';
 }
-const { title, description, ogType = 'website', ogTitle = title, ogDescription = description } = Astro.props;
+const { title, description, ogType = 'website', ogTitle = title, ogDescription = description, hour } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 const ogImage = new URL(withBase('/og-card.png'), Astro.site).href;
 ---
@@ -45,23 +47,33 @@ const ogImage = new URL(withBase('/og-card.png'), Astro.site).href;
     <link rel="alternate" type="application/rss+xml" title="tachi" href={withBase('/rss.xml')} />
     <link rel="sitemap" href={withBase('/sitemap-index.xml')} />
   </head>
-  <body data-hour="midday">
+  <body data-hour={hour ?? 'midday'} data-page-hour={hour}>
     <script is:inline>
       (function () {
-        var h = null;
-        try {
-          h = sessionStorage.getItem('tachi-hour');
-        } catch (e) {}
         var VALID = ['dawn', 'morning', 'midday', 'dusk', 'bleue', 'night'];
-        if (VALID.indexOf(h) === -1) {
-          var n = new Date().getHours();
-          h =
-            n >= 5 && n < 8 ? 'dawn'
-            : n >= 8 && n < 12 ? 'morning'
-            : n >= 12 && n < 16 ? 'midday'
-            : n >= 16 && n < 19 ? 'dusk'
-            : n >= 19 && n < 21 ? 'bleue'
-            : 'night';
+        var chosen = null;
+        try {
+          chosen = sessionStorage.getItem('tachi-hour');
+        } catch (e) {}
+        var h;
+        if (VALID.indexOf(chosen) !== -1) {
+          // A visitor who has set the hour keeps it everywhere. A poem may
+          // suggest its light, but only to someone who has not chosen.
+          h = chosen;
+        } else {
+          var pageHour = document.body.getAttribute('data-page-hour');
+          if (VALID.indexOf(pageHour) !== -1) {
+            h = pageHour;
+          } else {
+            var n = new Date().getHours();
+            h =
+              n >= 5 && n < 8 ? 'dawn'
+              : n >= 8 && n < 12 ? 'morning'
+              : n >= 12 && n < 16 ? 'midday'
+              : n >= 16 && n < 19 ? 'dusk'
+              : n >= 19 && n < 21 ? 'bleue'
+              : 'night';
+          }
         }
         document.body.setAttribute('data-hour', h);
       })();

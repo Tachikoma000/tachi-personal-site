@@ -5,6 +5,7 @@ illustration: "lotus-meditation"
 year: 2026
 family: "telling"
 order: 60
+hour: "dawn"
 epigraph: |
   Come to prayer.
   Come to flourishing.

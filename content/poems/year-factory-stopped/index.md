@@ -6,6 +6,7 @@ illustration: "cross-faith"
 year: 2026
 family: "telling"
 order: 70
+hour: "bleue"
 ---
 An ordinary morning, an interview to prepare for,
 a man stepping out of his front door

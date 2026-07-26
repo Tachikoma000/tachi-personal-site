@@ -31,7 +31,7 @@ const family = familyOf(poem.data.family);
 const note = await getEntry('poemNotes', poem.id);
 const NoteContent = note ? (await render(note)).Content : null;
 ---
-<Base title={`${poem.data.title} — tachi`} description={poem.data.excerpt} ogType="article">
+<Base title={`${poem.data.title} — tachi`} description={poem.data.excerpt} ogType="article" hour={poem.data.hour}>
   <section class="view">
     <TopBar active="poems" />
     <a class="back-link" href={withBase(`/poems/${family.slug}/`)}>← {family.name}</a>
