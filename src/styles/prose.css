@@ -196,6 +196,19 @@ body[data-hour="night"] .hour-mark [data-mark="night"] { display: block; }
 
 @media (prefers-reduced-motion: reduce) { .fdots i { animation: none; } }
 
+/* the telling, set (5e, 2026-07-26) — a long praise-song opens its throat and
+   then speaks: the first stanza a little larger, the rest at the reading size.
+   DESKTOP ONLY and TELLINGS ONLY. The original spec asked for 1.5rem opening
+   over a 1.32rem body, but 1.5rem is now the desktop ceiling of the poem's
+   fluid clamp, so shrinking the body would have reduced every telling's
+   reading size. Instead the body keeps its tuned size and the opening lifts
+   above it. Expressed in em so it rides the clamp; on mobile it does nothing,
+   which is deliberate — enlarging an opening stanza there would undo the
+   line-wrap fix. */
+@media (min-width: 640px) {
+  .poem-telling .poem-open { font-size: 1.12em; }
+}
+
 /* after the last line (5k, 2026-07-26) — a coda beneath the tailpiece naming
    the next poem in the family; the last of each family crosses to the head of
    the other, so the collection is one loop. The label always names the family,

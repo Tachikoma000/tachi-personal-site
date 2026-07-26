@@ -6,18 +6,21 @@ interface Props {
   body: string;
   tailpiece?: string;
   id?: string;
+  /** Tellings open their first stanza a little larger on desktop (5e). */
+  family?: 'breath' | 'telling';
 }
-const { body, tailpiece, id } = Astro.props;
+const { body, tailpiece, id, family } = Astro.props;
 const stanzas = parsePoem(body);
 ---
-<div class="poem" id={id}>
-  {stanzas.map((st) => {
+<div class={family === 'telling' ? 'poem poem-telling' : 'poem'} id={id}>
+  {stanzas.map((st, si) => {
+    const cls = si === 0 ? 'poem-line poem-open' : 'poem-line';
     const lines = st.lines.map((line) => renderLine(line));
     return (
       <>
         {st.italic
-          ? <em>{lines.map((html) => <span class="poem-line" set:html={html} />)}</em>
-          : lines.map((html) => <span class="poem-line" set:html={html} />)}
+          ? <em>{lines.map((html) => <span class={cls} set:html={html} />)}</em>
+          : lines.map((html) => <span class={cls} set:html={html} />)}
         <span class="stanza-gap"></span>
       </>
     );

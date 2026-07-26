@@ -49,7 +49,7 @@ const NoteContent = note ? (await render(note)).Content : null;
         <p>With love and gratitude,<br />Tachi</p>
       </AuthorNote>
     )}
-    <PoemBody body={poem.body ?? ''} tailpiece={poem.data.tailpiece ?? poem.data.illustration} id="the-poem" />
+    <PoemBody body={poem.body ?? ''} tailpiece={poem.data.tailpiece ?? poem.data.illustration} id="the-poem" family={poem.data.family} />
     {next && next.id !== poem.id && <NextPoem poem={next} />}
   </section>
 </Base>
