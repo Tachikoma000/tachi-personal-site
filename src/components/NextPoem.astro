@@ -1,0 +1,22 @@
+---
+// "After the last line" (5k) — one quiet coda beneath the tailpiece naming the
+// next poem in the family, so the authored order is legible to a reader who
+// arrived from RSS or a shared link rather than from an index.
+//
+// The last poem of each family crosses to the first of the other, so the whole
+// collection is one loop and nothing is ever a dead end. The label always names
+// the family, which means the crossing explains itself without special copy.
+import type { CollectionEntry } from 'astro:content';
+import { familyOf } from '../lib/families';
+import { withBase } from '../lib/url';
+
+interface Props {
+  poem: CollectionEntry<'poems'>;
+}
+const { poem } = Astro.props;
+const fam = familyOf(poem.data.family);
+---
+<a class="next-poem" href={withBase(`/poems/${poem.id}/`)}>
+  <span class="np-label">next in {fam.name}</span>
+  <span class="np-title">{poem.data.title}</span>
+</a>

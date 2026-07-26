@@ -196,6 +196,17 @@ body[data-hour="night"] .hour-mark [data-mark="night"] { display: block; }
 
 @media (prefers-reduced-motion: reduce) { .fdots i { animation: none; } }
 
+/* after the last line (5k, 2026-07-26) — a coda beneath the tailpiece naming
+   the next poem in the family; the last of each family crosses to the head of
+   the other, so the collection is one loop. The label always names the family,
+   so a crossing reads as a change of room rather than needing its own copy. */
+.next-poem { display: block; text-align: center; max-width: 34ch; margin: 3.4rem auto 0; text-decoration: none; color: inherit; }
+.next-poem:hover { opacity: 1; }
+.next-poem:hover .np-title { color: var(--accent); }
+.next-poem:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
+.np-label { display: block; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-meta); letter-spacing: var(--track-meta); text-transform: lowercase; color: var(--ink-soft); transition: color var(--transition-sky); }
+.np-title { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; line-height: 1.35; color: var(--ink); margin-top: 0.55rem; transition: color var(--duration-hover); }
+
 /* family page — "two hung, the rest shelved" (design 6c, 2026-07-26).
    Mobile is the base: a hung poem is an ordinary hairline row showing its
    frontmatter excerpt, so the phone page reads in one rhythm top to bottom.

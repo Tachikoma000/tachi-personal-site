@@ -6,14 +6,27 @@ import SectionHeading from '../../components/SectionHeading.astro';
 import AuthorNote from '../../components/AuthorNote.astro';
 import Epigraph from '../../components/Epigraph.astro';
 import PoemBody from '../../components/PoemBody.astro';
+import NextPoem from '../../components/NextPoem.astro';
 import { familyOf } from '../../lib/families';
 import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
   const poems = await getCollection('poems');
-  return poems.map((poem) => ({ params: { slug: poem.id }, props: { poem } }));
+  const byFamily = {
+    breath: poems.filter((p) => p.data.family === 'breath').sort((a, b) => a.data.order - b.data.order),
+    telling: poems.filter((p) => p.data.family === 'telling').sort((a, b) => a.data.order - b.data.order),
+  };
+  return poems.map((poem) => {
+    // Next in this family; at a family's end, cross to the head of the other,
+    // so the collection reads as one loop with no dead ends.
+    const siblings = byFamily[poem.data.family];
+    const here = siblings.findIndex((p) => p.id === poem.id);
+    const other = byFamily[poem.data.family === 'breath' ? 'telling' : 'breath'];
+    const next = siblings[here + 1] ?? other[0];
+    return { params: { slug: poem.id }, props: { poem, next } };
+  });
 }
-const { poem } = Astro.props;
+const { poem, next } = Astro.props;
 const family = familyOf(poem.data.family);
 const note = await getEntry('poemNotes', poem.id);
 const NoteContent = note ? (await render(note)).Content : null;
@@ -37,5 +50,6 @@ const NoteContent = note ? (await render(note)).Content : null;
       </AuthorNote>
     )}
     <PoemBody body={poem.body ?? ''} tailpiece={poem.data.tailpiece ?? poem.data.illustration} id="the-poem" />
+    {next && next.id !== poem.id && <NextPoem poem={next} />}
   </section>
 </Base>
