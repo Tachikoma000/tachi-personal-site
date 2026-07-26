@@ -6,6 +6,9 @@ illustration: "moon-crescent"
 year: 2026
 family: "telling"
 order: 20
+couplet: |
+  The moon was our ceiling.
+  We were never once poor under it.
 # Tellings use capital I; breaths use lowercase i. ONE DELIBERATE EXCEPTION
 # in this poem: the boy's cry through the smoke — "i love you, please come
 # back." — stays lowercase. The line's power is in its smallness. Do not

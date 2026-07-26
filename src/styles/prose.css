@@ -195,3 +195,34 @@ body[data-hour="night"] .hour-mark [data-mark="night"] { display: block; }
 @keyframes dotBreathe { 0%, 100% { opacity: 0.25; } 50% { opacity: 0.8; } }
 
 @media (prefers-reduced-motion: reduce) { .fdots i { animation: none; } }
+
+/* family page — "two hung, the rest shelved" (design 6c, 2026-07-26).
+   Mobile is the base: a hung poem is an ordinary hairline row showing its
+   frontmatter excerpt, so the phone page reads in one rhythm top to bottom.
+   The wall is the desktop enhancement (≥640px): a two-column grid where the
+   emblem rises above the title and the couplet replaces the excerpt. Same DOM
+   either way — one link, one tab stop, exactly one of couplet/excerpt rendered. */
+/* A hung poem carries .piece as well, so on mobile it inherits the hairline row
+   wholesale — including mobile.css's own .piece overrides — and can never drift
+   from the shelved rows beside it. Only the wall's own last-of-type border needs
+   cancelling, since the shelved row below already draws that hairline. */
+.hung { display: block; text-decoration: none; color: inherit; }
+.hung:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
+.wall .hung:last-of-type { border-bottom: none; }
+.hung-row { display: flex; gap: 1.8rem; align-items: center; justify-content: space-between; }
+.hung-text { min-width: 0; }
+.hung .hung-couplet { display: none; }
+.hung .hung-excerpt { margin-top: 1.1rem; font-size: var(--size-excerpt); color: var(--ink-soft); max-width: 56ch; transition: color var(--transition-sky); }
+
+@media (min-width: 640px) {
+  .wall { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; margin-bottom: 2.6rem; }
+  .hung { padding: 0; border-top: none; }
+  .hung:hover { padding-left: 0; }
+  .wall .hung:last-of-type { border-bottom: none; }
+  .hung:hover .piece-title { color: var(--accent); }
+  .hung .piece-title { transition: color var(--duration-hover); }
+  .hung-row { flex-direction: column-reverse; align-items: flex-start; gap: 1.1rem; }
+  .hung .spot { width: 54px !important; height: 54px !important; }
+  .hung .hung-excerpt { display: none; }
+  .hung .hung-couplet { display: block; margin-top: 0.9rem; font-family: var(--font-display); font-style: italic; font-size: 1.05rem; line-height: 1.7; color: var(--ink-soft); transition: color var(--transition-sky); }
+}

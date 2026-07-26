@@ -6,6 +6,9 @@ illustration: "hand-heart"
 year: 2026
 family: "telling"
 order: 10
+couplet: |
+  the mountain did not ask our names
+  it only said, climb.
 ---
 we did not come because it was easy
 (we came with more questions

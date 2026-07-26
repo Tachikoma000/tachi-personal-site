@@ -6,6 +6,9 @@ illustration: "bubbles"
 year: 2026
 family: "breath"
 order: 20
+couplet: |
+  the outside said keep walking.
+  the two stone lions by the door said otherwise,
 ---
 the outside said keep walking.
 the two stone lions by the door said otherwise,

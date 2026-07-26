@@ -1,11 +1,17 @@
 ---
-// Full index of one poem family (design 4g §4): family name as heading,
-// description as note, full entries (excerpts kept), newest first, with a
-// "← poems" back link. Reached from the overview's header, dots, and more-link.
+// Full index of one poem family (design 6c): the two newest are HUNG as a wall
+// on desktop — emblem, title, a couplet from the poem — and everything older is
+// SHELVED as the hairline list carrying frontmatter excerpts.
+//
+// Below 640px there is no wall: the same two links restyle into ordinary
+// hairline rows showing their excerpt instead of the couplet. One DOM, one link
+// per poem, one tab stop — the couplet and the excerpt swap by CSS, so exactly
+// one of them is ever rendered (and ever announced).
 import { getCollection } from 'astro:content';
 import TopBar from './TopBar.astro';
 import SectionHeading from './SectionHeading.astro';
 import PieceEntry from './PieceEntry.astro';
+import Spot from './Spot.astro';
 import { familyOf } from '../lib/families';
 import { withBase } from '../lib/url';
 
@@ -16,12 +22,46 @@ const fam = familyOf(Astro.props.familyKey);
 const poems = (await getCollection('poems'))
   .filter((p) => p.data.family === fam.key)
   .sort((a, b) => a.data.order - b.data.order);
+
+const HUNG = 2;
+const hung = poems.slice(0, HUNG);
+const shelved = poems.slice(HUNG);
+
+/** The couplet: authored if present, else the poem's first two lines. */
+function coupletOf(body: string, authored?: string): string[] {
+  if (authored) return authored.trimEnd().split('\n').slice(0, 2);
+  return body.trim().split('\n').filter((l) => l.trim()).slice(0, 2);
+}
 ---
 <section class="view">
   <TopBar active="poems" />
   <a class="back-link" href={withBase('/poems/')}>← poems</a>
   <SectionHeading title={fam.name} note={fam.description} />
-  {poems.map((p) => (
+
+  {hung.length > 0 && (
+    <div class="wall">
+      {hung.map((p) => (
+        <a class="piece piece-link hung" href={withBase(`/poems/${p.id}/`)}>
+          <div class="hung-row">
+            <div class="hung-text">
+              <div class="piece-title">{p.data.title}</div>
+              {p.data.sub && <div class="piece-sub">{p.data.sub}</div>}
+              <p class="hung-couplet">
+                {coupletOf(p.body ?? '', p.data.couplet).map((line, i) => (
+                  <Fragment>{i > 0 && <br />}{line}</Fragment>
+                ))}
+              </p>
+              <p class="hung-excerpt">{p.data.excerpt}</p>
+              <div class="piece-meta">{`poem · ${p.data.year} · `}<strong>by tachi</strong></div>
+            </div>
+            <Spot name={p.data.illustration} size={54} style="flex:none" />
+          </div>
+        </a>
+      ))}
+    </div>
+  )}
+
+  {shelved.map((p) => (
     <PieceEntry
       title={p.data.title}
       sub={p.data.sub}
@@ -31,6 +71,7 @@ const poems = (await getCollection('poems'))
       byline={true}
       href={withBase(`/poems/${p.id}/`)}
       illustration={p.data.illustration}
+      spotSize={44}
     />
   ))}
 </section>

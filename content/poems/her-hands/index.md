@@ -5,6 +5,9 @@ illustration: "gloves"
 year: 2026
 family: "breath"
 order: 10
+couplet: |
+  you would expect stone.
+  you get warm bread.
 ---
 my mother's hands have carried
 firewood, fevers, three jobs,

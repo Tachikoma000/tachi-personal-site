@@ -33,6 +33,9 @@ const poems = defineCollection({
     // multiple lines; epigraphSource renders as the attribution beneath.
     epigraph: z.string().optional(),
     epigraphSource: z.string().optional(),
+    // Two lines shown when this poem is hung on its family page wall (6c).
+    // Optional: falls back to the poem's first two lines. Use a block scalar (|).
+    couplet: z.string().optional(),
   }),
 });
 

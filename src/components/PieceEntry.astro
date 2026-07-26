@@ -10,8 +10,10 @@ interface Props {
   byline?: boolean;
   href: string;
   illustration?: string;
+  /** Emblem size. 72 everywhere by default; poem family pages pass 44 per 6c. */
+  spotSize?: number;
 }
-const { title, sub, excerpt, kind, year, byline = false, href, illustration } = Astro.props;
+const { title, sub, excerpt, kind, year, byline = false, href, illustration, spotSize = 72 } = Astro.props;
 ---
 <a class="piece piece-link" href={href} style="display:block;color:inherit">
   <div style="display:flex;gap:1.8rem;align-items:center;justify-content:space-between">
@@ -23,6 +25,6 @@ const { title, sub, excerpt, kind, year, byline = false, href, illustration } = 
         {byline ? <>{`${kind} · ${year} · `}<strong>by tachi</strong></> : `${kind} · ${year}`}
       </div>
     </div>
-    {illustration && <Spot name={illustration} size={72} style="flex:none" />}
+    {illustration && <Spot name={illustration} size={spotSize} style="flex:none" />}
   </div>
 </a>
