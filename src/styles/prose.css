@@ -180,6 +180,7 @@ body[data-hour="night"] .hour-mark [data-mark="night"] { display: block; }
 .door:hover .fname { color: var(--accent); }
 .door:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
 .door .fname { display: block; font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--ink); line-height: 1.25; transition: color 0.4s; }
+@media (min-width: 640px) { .door .fname { font-size: 1.7rem; } }
 .door .fdesc { display: block; font-style: italic; color: var(--ink-soft); font-size: 0.95rem; margin-top: 0.35rem; line-height: 1.55; }
 .door .inside { display: block; font-family: var(--font-utility); font-weight: 300; font-size: 0.62rem; letter-spacing: 0.14em; line-height: 2.1; color: var(--ink-soft); margin-top: 0.95rem; }
 .door .base { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }

@@ -19,10 +19,14 @@ const doors = FAMILIES.map((fam) => {
     .sort((a, b) => a.data.order - b.data.order);
   const shown = all.slice(0, WHISPERED).map((p) => p.data.title);
   const rest = all.length - shown.length;
-  const whisper =
+  const parts =
     rest > 0
-      ? [...shown, `and ${numberToWords(rest)} ${rest === 1 ? 'other' : 'others'}`].join(' · ')
-      : shown.join(' · ');
+      ? [...shown, `and ${numberToWords(rest)} ${rest === 1 ? 'other' : 'others'}`]
+      : shown;
+  // Non-breaking space before the separator, so a " · " can never wrap to the
+  // start of a line and read as a bullet. Titles print verbatim — a poem's
+  // title is authored text, not UI copy.
+  const whisper = parts.join(' · ');
   return { fam, whisper, count: numberToWords(all.length), total: all.length };
 });
 ---
