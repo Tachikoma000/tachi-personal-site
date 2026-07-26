@@ -1,6 +1,6 @@
 ---
 lede: "Tachi is the pen of Jephthah Akene."
-motto: "Handles, not halos."
+signoff: "— tachi"
 thread: "physics → mechanical engineering → spacecraft & instruments → ai → playgrounds & lattivox labs → rig · ryzome · arc → a novel → these tellings"
 ---
 Every story earns its teller, so let me account for mine. It begins in Lagos, in a loud and loving house of five boys, where a curious child crept into the storehouse to open the bodies of dead radios and ask them what made them sing. I have been asking that question ever since. I asked it of heat, and it became instruments that measure the smallest whispers of energy. I asked it of other worlds, and it became probes built to taste the breath of moons and regolith. I asked it of machines, and it became Playgrounds, where I build with Rig, Ryzome, and the ARC ecosystem. I ask it still, of quiet anomalies at the edge of known physics, under the roof of Lattivox Labs. The boy with the screwdriver never left. He only found bigger radios.

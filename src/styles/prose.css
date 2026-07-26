@@ -158,7 +158,7 @@ body[data-hour="night"] .hour-mark [data-mark="night"] { display: block; }
 .book-detail .stores { margin-top: 1.8rem; }
 .about p { margin-bottom: var(--ma-para); max-width: 58ch; }
 .about .about-lede { font-family: var(--font-display); font-style: italic; font-size: 1.35rem; line-height: 1.65; margin-bottom: 1.6rem; max-width: none; }
-.about .about-motto { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; margin-bottom: 1.6rem; }
+.about .about-signoff { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; margin-bottom: 1.6rem; }
 .about .thread { margin: 2.4rem 0; }
 .about .works-title { margin-top: 3.5rem; font-size: 1.7rem; }
 .about .works-group { margin-top: 1.8rem; }

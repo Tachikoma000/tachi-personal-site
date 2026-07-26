@@ -73,7 +73,7 @@ const books = defineCollection({
 
 const about = defineCollection({
   loader: glob({ pattern: 'bio.md', base: './content/about', generateId: () => 'bio' }),
-  schema: z.object({ lede: z.string(), motto: z.string(), thread: z.string() }),
+  schema: z.object({ lede: z.string(), signoff: z.string(), thread: z.string() }),
 });
 
 const selectedWorks = defineCollection({
