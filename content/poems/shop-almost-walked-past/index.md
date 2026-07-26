@@ -7,8 +7,8 @@ year: 2026
 family: "breath"
 order: 20
 couplet: |
-  the outside said keep walking.
-  the two stone lions by the door said otherwise,
+  the islanders say nuchi gusui.
+  food is medicine.
 ---
 the outside said keep walking.
 the two stone lions by the door said otherwise,

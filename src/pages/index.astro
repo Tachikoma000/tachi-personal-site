@@ -1,9 +1,21 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Spot from '../components/Spot.astro';
 import Epigraph from '../components/Epigraph.astro';
 import PathList from '../components/PathList.astro';
 import HourMark from '../components/HourMark.astro';
+
+// The turning epigraph (5i): the arrival quotation is drawn from a poem that
+// has declared its own couplet, and turns on every build — so publishing moves
+// the front door. The pool is authorial: a poem joins it by carrying a
+// `couplet:`, the same field the family wall uses. Falls back to the fixed
+// quotation from The Knock if no poem has one.
+const withCouplet = (await getCollection('poems')).filter((p) => p.data.couplet);
+const turning = withCouplet.length
+  ? withCouplet[Math.floor(Math.random() * withCouplet.length)]
+  : null;
+const turningLines = turning?.data.couplet?.trimEnd().split('\n').slice(0, 2) ?? [];
 ---
 <Base
   title="tachi — handles, not halos"
@@ -16,7 +28,15 @@ import HourMark from '../components/HourMark.astro';
     <Spot name="bird-creature" size={104} style="margin:0 auto 2.2rem" />
     <h1 style="font-family:var(--font-display);font-weight:300;font-size:var(--size-hero);letter-spacing:var(--track-hero);text-indent:var(--track-hero);text-transform:lowercase;transition:color var(--transition-sky)">tachi</h1>
     <p class="whisper" style="margin-top:0.9rem">writings · poems · musings · beauty</p>
-    <Epigraph attribution="the knock" style="margin-top:4.2rem;max-width:none">“The best of it arrives. It is not made.”</Epigraph>
+    {turning ? (
+      <Epigraph attribution={turning.data.title} style="margin-top:4.2rem;max-width:none">
+        {turningLines.map((line, i) => (
+          <Fragment>{i > 0 && <br />}{line}</Fragment>
+        ))}
+      </Epigraph>
+    ) : (
+      <Epigraph attribution="the knock" style="margin-top:4.2rem;max-width:none">“The best of it arrives. It is not made.”</Epigraph>
+    )}
     <PathList
       style="margin-top:5.5rem"
       paths={[
