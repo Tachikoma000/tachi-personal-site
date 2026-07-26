@@ -5,7 +5,7 @@ excerpt: "An ordinary morning, an interview to prepare for, a man stepping out o
 illustration: "cross-faith"
 year: 2026
 family: "telling"
-order: 60
+order: 70
 ---
 An ordinary morning, an interview to prepare for,
 a man stepping out of his front door

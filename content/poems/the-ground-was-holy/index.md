@@ -4,7 +4,7 @@ excerpt: "Six in the morning, and the street had an alarm that belonged to no on
 illustration: "lotus-meditation"
 year: 2026
 family: "telling"
-order: 100
+order: 60
 epigraph: |
   Come to prayer.
   Come to flourishing.

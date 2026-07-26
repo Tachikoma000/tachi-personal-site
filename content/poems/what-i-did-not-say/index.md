@@ -4,7 +4,7 @@ excerpt: "I brought a degree, a company, a clean shave. That is what a guest bri
 illustration: "stick-figure"
 year: 2026
 family: "telling"
-order: 90
+order: 100
 ---
 I brought a degree, a company, a clean shave.
 That is what a guest brings to a house.

@@ -4,7 +4,7 @@ excerpt: "Iron. The mouth closes on the word like a vice…"
 illustration: "sai-ninja"
 year: 2026
 family: "telling"
-order: 70
+order: 80
 ---
 Iron.
 The mouth closes on the word like a vice.
