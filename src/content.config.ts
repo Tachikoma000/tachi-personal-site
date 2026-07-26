@@ -29,6 +29,10 @@ const poems = defineCollection({
   schema: pieceSchema.extend({
     // "the long tellings" (narrative praise-songs) vs "the short breaths" (lyrics)
     family: z.enum(['telling', 'breath']).default('breath'),
+    // Optional quoted epigraph above the poem. Use a YAML block scalar (|) for
+    // multiple lines; epigraphSource renders as the attribution beneath.
+    epigraph: z.string().optional(),
+    epigraphSource: z.string().optional(),
   }),
 });
 

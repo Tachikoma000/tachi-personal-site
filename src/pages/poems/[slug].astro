@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import TopBar from '../../components/TopBar.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import AuthorNote from '../../components/AuthorNote.astro';
+import Epigraph from '../../components/Epigraph.astro';
 import PoemBody from '../../components/PoemBody.astro';
 import { familyOf } from '../../lib/families';
 import { withBase } from '../../lib/url';
@@ -22,6 +23,13 @@ const NoteContent = note ? (await render(note)).Content : null;
     <TopBar active="poems" />
     <a class="back-link" href={withBase(`/poems/${family.slug}/`)}>← {family.name}</a>
     <SectionHeading title={poem.data.title} note={poem.data.sub} />
+    {poem.data.epigraph && (
+      <Epigraph attribution={poem.data.epigraphSource} style="max-width:40ch;margin:0 0 2.9rem">
+        {poem.data.epigraph.trimEnd().split('\n').map((line, i) => (
+          <Fragment>{i > 0 && <br />}{line}</Fragment>
+        ))}
+      </Epigraph>
+    )}
     {NoteContent && (
       <AuthorNote label="a note from the author" labelClause=", before the poem" skipLabel="to the poem" bridgeLabel="the poem" target="the-poem">
         <NoteContent />
