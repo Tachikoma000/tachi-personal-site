@@ -168,42 +168,29 @@ body[data-hour="night"] .hour-mark [data-mark="night"] { display: block; }
 .about .work-sub { font-style: italic; color: var(--ink-soft); font-size: 0.9rem; margin-top: 0.15rem; }
 .about .work-links { margin-top: 0.6rem; }
 .not-found { text-align: center; padding-top: 18vh; }
-/* poem families (design 4g, 2026-07-24): the index shows two family blocks —
-   header (name + description + breathing ink dots) → three newest rows →
-   more-link. Spec CSS lifted verbatim; block-display, descending dot opacity,
-   row text internals, and row night-invert fill gaps the spec described in
-   prose. */
-.family-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; text-decoration: none; margin-bottom: 0.4rem; }
-.family-head .fname { display: block; font-family: var(--font-display); font-size: 1.35rem; font-weight: 400; color: var(--ink); transition: color var(--duration-hover); }
-.family-head .fdesc { display: block; font-style: italic; color: var(--ink-soft); font-size: 0.88rem; margin-top: 0.15rem; }
-.family-head:hover { opacity: 1; }
-.family-head:hover .fname { color: var(--accent); }
-.family-head:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
-@media (min-width: 640px) { .family-head .fname { font-size: 1.5rem; } }
+/* poems index — "two doors" (design 7b, 2026-07-26; supersedes the three-preview
+   index of design 4g). Each family is one link: name, description, a whisper of
+   its first titles, and a baseline carrying the total plus the breathing dots.
+   Spec CSS lifted verbatim; display:block on the inner spans is required for
+   the spec's own margin-top values to apply, and the dots keep their 4g class
+   name (.fdots) and behaviour unchanged. */
+.door { display: block; text-decoration: none; border-top: 1px solid var(--hairline); padding: 1.9rem 0.2rem 2rem; transition: padding-left 0.45s ease, border-color var(--transition-sky); }
+.door:last-of-type { border-bottom: 1px solid var(--hairline); }
+.door:hover { opacity: 1; padding-left: 0.7rem; }
+.door:hover .fname { color: var(--accent); }
+.door:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
+.door .fname { display: block; font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--ink); line-height: 1.25; transition: color 0.4s; }
+.door .fdesc { display: block; font-style: italic; color: var(--ink-soft); font-size: 0.95rem; margin-top: 0.35rem; line-height: 1.55; }
+.door .inside { display: block; font-family: var(--font-utility); font-weight: 300; font-size: 0.62rem; letter-spacing: 0.14em; line-height: 2.1; color: var(--ink-soft); margin-top: 0.95rem; }
+.door .base { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
+.door .count { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-meta); letter-spacing: var(--track-meta); text-transform: lowercase; color: var(--accent); transition: color var(--transition-sky); }
+.door:hover .fdots i { background: var(--accent); opacity: 0.9; animation: none; }
+
 .fdots { display: flex; gap: 0.34rem; align-items: center; flex: none; padding: 0.4rem 0; }
 .fdots i { width: 4.5px; height: 4.5px; border-radius: 999px; background: var(--ink-soft); animation: dotBreathe 4.5s ease-in-out infinite; transition: background 0.4s, opacity 0.4s; }
 .fdots i:nth-child(1) { opacity: 0.55; }
 .fdots i:nth-child(2) { opacity: 0.40; animation-delay: 0.35s; }
 .fdots i:nth-child(3) { opacity: 0.25; animation-delay: 0.7s; }
-.family-head:hover .fdots i { background: var(--accent); opacity: 0.9; animation: none; }
 @keyframes dotBreathe { 0%, 100% { opacity: 0.25; } 50% { opacity: 0.8; } }
 
-.poem-row { padding: 0.9rem 0.1rem; border-top: 1px solid var(--hairline); display: flex; justify-content: space-between; align-items: center; gap: 1rem; text-decoration: none; color: var(--ink); transition: padding-left 0.45s ease, border-color var(--transition-sky); }
-.poem-row:last-of-type { border-bottom: 1px solid var(--hairline); }
-.poem-row:hover { padding-left: 0.6rem; opacity: 1; }
-.poem-row .pr-text { min-width: 0; }
-.poem-row .pr-title { display: block; font-family: var(--font-display); font-size: 1.15rem; font-weight: 400; line-height: 1.3; color: var(--ink); }
-.poem-row .pr-sub { display: block; font-style: italic; color: var(--ink-soft); font-size: 0.9rem; margin-top: 0.1rem; }
-.poem-row .pr-meta { display: block; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-meta); letter-spacing: var(--track-meta); text-transform: lowercase; color: var(--accent); margin-top: 0.4rem; transition: color var(--transition-sky); }
-.poem-row img { width: 44px; height: 44px; object-fit: contain; flex: none; }
-@media (min-width: 640px) { .poem-row img { width: 52px; height: 52px; } }
-body[data-hour="night"] .poem-row img { filter: invert(0.88); }
-
-.family-more { display: flex; justify-content: flex-end; margin: 0.8rem 0 2.6rem; }
-.family-more a { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-meta); text-transform: lowercase; color: var(--ink-soft); text-decoration: none; padding-bottom: 0.2rem; border-bottom: 1px solid var(--hairline); animation: skipBreathe 4.5s ease-in-out infinite; }
-.family-more a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-.family-more a:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
-.family-more .arr { display: inline-block; animation: moreDrift 3.8s ease-in-out infinite; }
-@keyframes moreDrift { 0%, 55%, 100% { transform: translateX(0); } 70% { transform: translateX(3px); } 85% { transform: translateX(0); } }
-
-@media (prefers-reduced-motion: reduce) { .fdots i, .family-more a, .family-more .arr { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .fdots i { animation: none; } }

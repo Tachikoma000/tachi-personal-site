@@ -1,48 +1,49 @@
 ---
+// Poems index — "two doors" (design 7b, supersedes the three-preview index).
+// The index no longer previews poems: each family is one door stating what it
+// is, whispering its first few titles, and carrying its total on the baseline.
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import TopBar from '../../components/TopBar.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
-import PoemRow from '../../components/PoemRow.astro';
 import { FAMILIES } from '../../lib/families';
 import { numberToWords } from '../../lib/numberToWords';
 import { withBase } from '../../lib/url';
 
+const WHISPERED = 5; // titles shown inside each door before "and N others"
+
 const poems = await getCollection('poems');
-const groups = FAMILIES.map((fam) => {
+const doors = FAMILIES.map((fam) => {
   const all = poems
     .filter((p) => p.data.family === fam.key)
     .sort((a, b) => a.data.order - b.data.order);
-  return { fam, all, shown: all.slice(0, 3), remainder: Math.max(0, all.length - 3) };
+  const shown = all.slice(0, WHISPERED).map((p) => p.data.title);
+  const rest = all.length - shown.length;
+  const whisper =
+    rest > 0
+      ? [...shown, `and ${numberToWords(rest)} ${rest === 1 ? 'other' : 'others'}`].join(' · ')
+      : shown.join(' · ');
+  return { fam, whisper, count: numberToWords(all.length), total: all.length };
 });
 ---
 <Base title="poems — tachi" description="praise-songs & lyrics — poems by tachi">
   <section class="view">
     <TopBar active="poems" />
     <SectionHeading title="Poems" note="praise-songs & lyrics" />
-    {groups.map(({ fam, all, shown, remainder }) => (
-      <div class="poem-family">
-        <a
-          class="family-head"
-          href={withBase(`/poems/${fam.slug}/`)}
-          aria-label={`${fam.name} — all ${numberToWords(all.length)}`}
-        >
-          <span class="fnames">
-            <span class="fname">{fam.name}</span>
-            <span class="fdesc">{fam.description}</span>
-          </span>
+    {doors.map(({ fam, whisper, count, total }) => (
+      <a
+        class="door"
+        href={withBase(`/poems/${fam.slug}/`)}
+        aria-label={`${fam.name} — ${count} poem${total === 1 ? '' : 's'}`}
+      >
+        <span class="fname">{fam.name}</span>
+        <span class="fdesc">{fam.description}</span>
+        <span class="inside">{whisper}</span>
+        <span class="base">
+          <span class="count">{count}</span>
           <span class="fdots" aria-hidden="true"><i></i><i></i><i></i></span>
-        </a>
-        {shown.map((p) => <PoemRow poem={p} showSub={fam.key === 'telling'} />)}
-        {remainder > 0 && (
-          <div class="family-more">
-            <a href={withBase(`/poems/${fam.slug}/`)}>
-              {numberToWords(remainder)} more {remainder === 1 ? fam.moreNoun : `${fam.moreNoun}s`}
-              {' '}<span class="arr">→</span>
-            </a>
-          </div>
-        )}
-      </div>
+        </span>
+      </a>
     ))}
   </section>
 </Base>
