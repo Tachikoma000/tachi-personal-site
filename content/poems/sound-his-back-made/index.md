@@ -97,7 +97,6 @@ on wages that finished before the month did.
 And still we were loved. And still we were fed.
 And still every one of us grew
 into hands that build and hearts that feel.
-Let the record of heaven show it plainly.
 The man did well.
 
 So here is what we did, my father and I.

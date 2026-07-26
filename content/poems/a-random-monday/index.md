@@ -101,8 +101,7 @@ to find out whether it gets to be true.
 So we go again at the end of the year,
 when the numbers say something a stranger can read.
 Ryzome will find its people or it will not.
-I believe it will. I want that on the page
-in case I am right, and in case I am not.
+I believe it will.
 
 Tomorrow I will open the laptop
 before my eyes are properly open,

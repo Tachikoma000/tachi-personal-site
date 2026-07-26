@@ -131,7 +131,6 @@ and that everything I had walked past on the way
 was, in the kindest possible telling, an error.
 
 I believed the house.
-I want that on the page.
 I was not a doubting child. I loved the house.
 I carry more of it than I admit in company.
 
@@ -158,7 +157,7 @@ Devotion looks the same from the outside
 whichever door it walks through.
 I had seen it through every door on my street
 before I was eleven,
-and I have never found a way to lay that down
+and I have not found a way to lay that down
 next to what I was taught
 so that both of them lie flat.
 

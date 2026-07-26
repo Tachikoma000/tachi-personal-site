@@ -38,16 +38,13 @@ and came out the far side,
 and the road existed after that.
 
 I was not raised to say your name.
-I am saying it sideways, in a poem,
-which is how a man handles a thing
-he has been told is not there.
+I am saying it sideways, in a poem.
 
 Because there was a room.
 
 Cold ward, rough sheet, fluorescent hour with no noon in it.
 Machines counting me out loud.
 A drill going into the hip for the marrow,
-which is a smith's operation performed on a man,
 boring for the seam, bringing up the sample,
 the body opened at the bone like ore.
 
