@@ -44,7 +44,7 @@ const NoteContent = note ? (await render(note)).Content : null;
       </Epigraph>
     )}
     {NoteContent && (
-      <AuthorNote label="a note from the author" labelClause=", before the poem" skipLabel="to the poem" bridgeLabel="the poem" target="the-poem">
+      <AuthorNote label="a note, before we begin" skipLabel="to the poem" bridgeLabel="the poem" target="the-poem">
         <NoteContent />
         <p>With love and gratitude,<br />Tachi</p>
       </AuthorNote>

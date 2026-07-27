@@ -109,7 +109,6 @@ a.piece-link:hover { opacity: 1; padding-left: 0.8rem; }
    line; if even that must wrap (very narrow), the control stacks left-aligned
    under the label instead of orphaning right. */
 @media (max-width: 640px) {
-  .note-label .note-clause { display: none; }
   .skip-note { margin-left: 0; }
 }
 

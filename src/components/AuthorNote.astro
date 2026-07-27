@@ -5,17 +5,16 @@
 // buttons) keep a working no-JS fallback; JS prevents the URL change and
 // applies the -24px landing offset.
 interface Props {
-  label: string;
-  labelClause?: string; // desktop-only tail, e.g. ", before the poem" — hidden on mobile where the skip control carries the meaning
+  label: string; // "a note, before we begin" — the same on poems and essays
   skipLabel: string; // e.g. "to the poem"
   bridgeLabel: string; // e.g. "the poem"
   target: string; // id of the piece wrapper
 }
-const { label, labelClause, skipLabel, bridgeLabel, target } = Astro.props;
+const { label, skipLabel, bridgeLabel, target } = Astro.props;
 ---
 <div class="author-note">
   <div class="note-head">
-    <span class="note-label">{label}{labelClause && <span class="note-clause">{labelClause}</span>}</span>
+    <span class="note-label">{label}</span>
     <a class="skip-note" href={`#${target}`} data-target={target}>{skipLabel} <span class="arr">↓</span></a>
   </div>
   <slot />
