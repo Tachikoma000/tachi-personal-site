@@ -21,7 +21,7 @@
 .paths a:last-child { border-bottom: 1px solid var(--hairline); }
 .paths a:hover { opacity: 1; padding-left: 0.8rem; }
 .paths .path-name { font-family: var(--font-display); font-size: var(--size-path); font-weight: 400; }
-.paths .path-hint { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-hint); color: var(--ink-soft); text-align: right; transition: color var(--transition-sky); }
+.paths .path-hint { font-family: var(--font-utility); font-weight: 400; font-size: var(--size-hint); letter-spacing: var(--track-hint); color: var(--ink); text-align: right; transition: color var(--transition-sky); }
 
 .topbar { display: flex; align-items: center; justify-content: space-between; padding: 2rem 0 0; margin-bottom: var(--ma-topbar); }
 .home-mark { width: 34px; height: 34px; color: var(--accent); cursor: pointer; background: none; border: none; padding: 0; transition: color var(--transition-sky), transform 0.5s ease; }
@@ -29,7 +29,7 @@
 .home-mark:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; border-radius: 50%; }
 .home-mark svg path { stroke: currentColor; fill: none; stroke-width: 9; stroke-linecap: round; opacity: 0.9; }
 .topnav { display: flex; gap: 1.6rem; }
-.topnav a { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; text-decoration: none; color: var(--ink-soft); padding-bottom: 0.25rem; border-bottom: 1px solid transparent; transition: color var(--duration-hover), border-color var(--duration-hover); }
+.topnav a { font-family: var(--font-utility); font-weight: 400; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; text-decoration: none; color: var(--ink); padding-bottom: 0.25rem; border-bottom: 1px solid transparent; transition: color var(--duration-hover), border-color var(--duration-hover); }
 .topnav a:hover, .topnav a.here { opacity: 1; color: var(--ink); border-bottom-color: var(--accent); }
 
 .section-title { font-family: var(--font-display); font-weight: 300; font-size: var(--size-title); letter-spacing: 0.05em; margin-bottom: 0.6rem; }
@@ -83,7 +83,7 @@ a.piece-link:hover { opacity: 1; padding-left: 0.8rem; }
 /* ————— production additions — values promoted from the handoff .ref.jsx inline styles ————— */
 .piece-meta strong { font-weight: 500; }
 .home-mark { display: inline-block; }
-.back-link { display: inline-block; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; color: var(--ink-soft); margin-bottom: 2.2rem; }
+.back-link { display: inline-block; font-family: var(--font-utility); font-weight: 400; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; color: var(--ink); margin-bottom: 2.2rem; }
 .author-note { margin-bottom: 2.8rem; padding-bottom: 2.4rem; border-bottom: 1px solid var(--hairline); }
 .author-note .note-label { font-family: var(--font-utility); font-weight: 400; font-size: 0.7rem; letter-spacing: var(--track-poemtitle); text-transform: lowercase; color: var(--accent); }
 .author-note p { font-style: italic; color: var(--ink-soft); margin-bottom: var(--ma-para); max-width: 56ch; }
@@ -91,14 +91,14 @@ a.piece-link:hover { opacity: 1; padding-left: 0.8rem; }
 
 /* skip-note indicator — designer spec 2026-07-24 (head skip + bridge) */
 .note-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.4rem; }
-.skip-note { appearance: none; border: none; background: none; cursor: pointer; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-meta); text-transform: lowercase; color: var(--ink-soft); padding: 0 0 0.2rem; border-bottom: 1px solid var(--hairline); transition: color 0.4s, border-color 0.4s; white-space: nowrap; flex: none; margin-left: auto; animation: skipBreathe 4.5s ease-in-out infinite; }
+.skip-note { appearance: none; border: none; background: none; cursor: pointer; font-family: var(--font-utility); font-weight: 400; font-size: var(--size-hint); letter-spacing: var(--track-meta); text-transform: lowercase; color: var(--ink); padding: 0 0 0.2rem; border-bottom: 1px solid var(--hairline); transition: color 0.4s, border-color 0.4s; white-space: nowrap; flex: none; margin-left: auto; animation: skipBreathe 4.5s ease-in-out infinite; }
 .skip-note .arr { display: inline-block; animation: skipDrift 3.8s ease-in-out infinite; }
 .skip-note:hover { opacity: 1; color: var(--accent); border-bottom-color: var(--accent); }
 .skip-note:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
-@keyframes skipBreathe { 0%, 100% { color: var(--ink-soft); border-bottom-color: var(--hairline); } 50% { color: var(--accent); border-bottom-color: var(--accent); } }
+@keyframes skipBreathe { 0%, 100% { color: var(--ink); border-bottom-color: var(--hairline); } 50% { color: var(--accent); border-bottom-color: var(--accent); } }
 @keyframes skipDrift { 0%, 55%, 100% { transform: translateY(0); } 70% { transform: translateY(3px); } 85% { transform: translateY(0); } }
 
-.note-bridge { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin: 1.9rem auto 0; appearance: none; border: none; background: none; cursor: pointer; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-hint); letter-spacing: var(--track-poemtitle); text-transform: lowercase; color: var(--ink-soft); transition: color 0.4s; }
+.note-bridge { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin: 1.9rem auto 0; appearance: none; border: none; background: none; cursor: pointer; font-family: var(--font-utility); font-weight: 400; font-size: var(--size-hint); letter-spacing: var(--track-poemtitle); text-transform: lowercase; color: var(--ink); transition: color 0.4s; }
 .note-bridge:hover { opacity: 1; color: var(--accent); }
 .note-bridge:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
 .note-bridge .stem { width: 1px; height: 26px; background: var(--hairline); position: relative; overflow: hidden; }
@@ -120,8 +120,8 @@ a.piece-link:hover { opacity: 1; padding-left: 0.8rem; }
 .home-link:hover { opacity: 1; }
 .home-link:hover .home-mark { transform: rotate(-8deg); }
 .home-link:hover .home-word { color: var(--ink); border-bottom-color: var(--accent); }
-.home-word { font-family: var(--font-utility); font-weight: 300; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; color: var(--ink-soft); padding-bottom: 0.25rem; border-bottom: 1px solid transparent; transition: color var(--duration-hover), border-color var(--duration-hover); }
-.hour-mark { appearance: none; border: none; background: none; cursor: pointer; display: inline-flex; align-items: center; padding: 0.25rem 0 0.45rem; color: var(--ink-soft); transition: color var(--duration-hover); }
+.home-word { font-family: var(--font-utility); font-weight: 400; font-size: var(--size-caption); letter-spacing: var(--track-nav); text-transform: lowercase; color: var(--ink); padding-bottom: 0.25rem; border-bottom: 1px solid transparent; transition: color var(--duration-hover), border-color var(--duration-hover); }
+.hour-mark { appearance: none; border: none; background: none; cursor: pointer; display: inline-flex; align-items: center; padding: 0.25rem 0 0.45rem; color: var(--ink); transition: color var(--duration-hover); }
 .hour-mark:hover { color: var(--ink); }
 .hour-mark:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
 .hour-mark svg { display: block; }
@@ -217,7 +217,7 @@ body[data-hour="night"] .hour-mark [data-mark="night"] { display: block; }
 .next-poem:hover { opacity: 1; }
 .next-poem:hover .np-title { color: var(--accent); }
 .next-poem:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
-.np-label { display: block; font-family: var(--font-utility); font-weight: 300; font-size: var(--size-meta); letter-spacing: var(--track-meta); text-transform: lowercase; color: var(--ink-soft); transition: color var(--transition-sky); }
+.np-label { display: block; font-family: var(--font-utility); font-weight: 400; font-size: var(--size-meta); letter-spacing: var(--track-meta); text-transform: lowercase; color: var(--ink); transition: color var(--transition-sky); }
 .np-title { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; line-height: 1.35; color: var(--ink); margin-top: 0.55rem; transition: color var(--duration-hover); }
 
 /* family page — "two hung, the rest shelved" (design 6c, 2026-07-26).

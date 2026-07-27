@@ -21,5 +21,12 @@ body[data-hour="dawn"] { --sky-a: #EFC3BC; --sky-b: #F0D9C6; --sky-c: #F7F1E5; -
 body[data-hour="morning"] { --sky-a: #C5D6E2; --sky-b: #E3E7DD; --sky-c: #F7F2E8; --accent: #6E89A8; }
 body[data-hour="midday"] { --sky-a: #A9C3D9; --sky-b: #CDD9DD; --sky-c: #F5F1E6; --accent: #3D5A80; }
 body[data-hour="dusk"] { --sky-a: #DFAF74; --sky-b: #E4BBA8; --sky-c: #F6EFE2; --accent: #A9713F; }
-body[data-hour="bleue"] { --sky-a: #46557E; --sky-b: #8B90AE; --sky-c: #EFECE4; --accent: #46557E; }
+/* l'heure bleue, corrected 2026-07-26: the handoff's sky-top (#46557E) was ~4x
+   darker than any other light-theme hour, so dark ink over it measured 1.07:1 —
+   the navbar was effectively invisible — and its accent was the *same colour* as
+   its sky, giving the active-nav underline zero contrast. Sky-top and sky-mid are
+   lifted (keeping the gradient brightening downward and the hour recognisably
+   blue: it is still the darkest of the light hours) and the accent darkened so it
+   separates from the sky it sits on. */
+body[data-hour="bleue"] { --sky-a: #9AA3BE; --sky-b: #C2C6D6; --sky-c: #EFECE4; --accent: #3C4A72; }
 body[data-hour="night"] { --paper: #232838; --ink: #E7E2D6; --ink-soft: #A9A6B4; --hairline: rgba(231, 226, 214, 0.22); --sky-a: #0E1220; --sky-b: #1A2033; --sky-c: #232838; --accent: #93A7CB; --noise-opacity: 0.035; /* @kind other */ }
