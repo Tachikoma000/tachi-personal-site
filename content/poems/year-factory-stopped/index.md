@@ -1,6 +1,5 @@
 ---
 title: "the year the factory stopped"
-sub: "---"
 excerpt: "An ordinary morning, an interview to prepare for, a man stepping out of his front door into a swarm of wasps…"
 illustration: "cross-faith"
 year: 2026
